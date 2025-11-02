@@ -1,0 +1,43 @@
+{
+  "timestamp": "2025-11-01T23:27:01.947489",
+  "config": {
+    "num_benign": 10000,
+    "num_malicious": 5000,
+    "chunk_size": 10000,
+    "augment_multiplier": 5,
+    "out_csv": "data/dataset.csv",
+    "out_jl": "data/dataset.jl",
+    "to_parquet": false,
+    "bot_ip_ratio": 0.1,
+    "start_date": "2025-01-01",
+    "end_date": "2025-10-29",
+    "max_duplicates": 3,
+    "inspect_sample_size": 100
+  },
+  "stats": {
+    "benign_count": 7700,
+    "malicious_count": 4936,
+    "duplicates_rejected": 2364,
+    "attack_types": {
+      "error": 626,
+      "path-injection": 270,
+      "stacked": 472,
+      "boolean": 1517,
+      "time-based": 880,
+      "union": 762,
+      "blind": 262,
+      "header-injection": 147
+    },
+    "insertion_points": {
+      "body_json": 762,
+      "query_param": 3180,
+      "body_form": 754,
+      "header": 87,
+      "path": 153
+    }
+  },
+  "files": {
+    "csv": "data/dataset.csv",
+    "jsonlines": "data/dataset.jl"
+  }
+}

