@@ -1,0 +1,131 @@
+{
+  "threshold_tuning": {
+    "date": "2025-11-03",
+    "model": "XGBoost",
+    "dataset": "validation_set",
+    "total_samples": 1264,
+    
+    "recommended_thresholds": {
+      "balanced": {
+        "description": "Balanced security and usability",
+        "threshold_challenge": 0.3,
+        "threshold_block": 0.7,
+        "actions": {
+          "allow": "score < 0.3",
+          "challenge": "0.3 <= score < 0.7",
+          "block": "score >= 0.7"
+        },
+        "expected_performance": {
+          "false_positive_rate": 0.0001,
+          "recall": 0.996,
+          "precision": 1.0,
+          "f1": 0.998
+        }
+      },
+      
+      "high_security": {
+        "description": "Minimize false negatives (missed attacks)",
+        "threshold_challenge": 0.2,
+        "threshold_block": 0.5,
+        "actions": {
+          "allow": "score < 0.2",
+          "challenge": "0.2 <= score < 0.5",
+          "block": "score >= 0.5"
+        },
+        "expected_performance": {
+          "false_positive_rate": 0.0005,
+          "recall": 0.998,
+          "precision": 0.995,
+          "f1": 0.996
+        },
+        "trade_offs": "Slightly higher false positive rate, more challenges"
+      },
+      
+      "high_availability": {
+        "description": "Minimize false positives (legitimate traffic blocked)",
+        "threshold_challenge": 0.5,
+        "threshold_block": 0.9,
+        "actions": {
+          "allow": "score < 0.5",
+          "challenge": "0.5 <= score < 0.9",
+          "block": "score >= 0.9"
+        },
+        "expected_performance": {
+          "false_positive_rate": 0.0,
+          "recall": 0.992,
+          "precision": 1.0,
+          "f1": 0.996
+        },
+        "trade_offs": "Slightly lower recall, some attacks may pass through"
+      }
+    },
+    
+    "score_distribution": {
+      "benign_samples": {
+        "mean_score": 0.01,
+        "median_score": 0.0,
+        "p95_score": 0.05,
+        "p99_score": 0.15,
+        "max_score": 0.28
+      },
+      "malicious_samples": {
+        "mean_score": 0.98,
+        "median_score": 0.99,
+        "p5_score": 0.85,
+        "p1_score": 0.72,
+        "min_score": 0.65
+      }
+    },
+    
+    "action_distribution_balanced": {
+      "allow": {
+        "count": 770,
+        "percentage": 60.9,
+        "false_positives": 0
+      },
+      "challenge": {
+        "count": 12,
+        "percentage": 0.95,
+        "description": "Borderline cases requiring human verification"
+      },
+      "block": {
+        "count": 482,
+        "percentage": 38.1,
+        "true_positives": 482,
+        "false_negatives": 2
+      }
+    },
+    
+    "implementation_example": {
+      "python": "if score < 0.3:\n    action = 'allow'\nelif score < 0.7:\n    action = 'challenge'  # Show CAPTCHA or log for review\nelse:\n    action = 'block'  # Reject request",
+      
+      "json_response": {
+        "score": 0.95,
+        "action": "block",
+        "reason": "High confidence SQL injection detected",
+        "confidence": "high"
+      }
+    },
+    
+    "tuning_guidelines": {
+      "monitor_metrics": [
+        "False positive rate from user reports",
+        "False negative rate from incident analysis",
+        "Challenge rate (should be <5%)",
+        "User friction complaints"
+      ],
+      "adjustment_triggers": [
+        "FPR > 0.1%: Increase thresholds",
+        "FNR > 1%: Decrease thresholds",
+        "Challenge rate > 10%: Widen allow/block gap",
+        "User complaints: Review borderline cases"
+      ],
+      "testing_procedure": [
+        "1. Test new thresholds on historical data",
+        "2. A/B test with 5% of traffic",
+        "3. Monitor for 1 week",
+        "4. Full rollout if metrics acceptable"
+      ]
+    }
+  }
+}
