@@ -1,0 +1,41 @@
+{
+  "model_name": "XGBoost",
+  "timestamp": "20251103_200539",
+  "metrics": {
+    "model_name": "XGBoost",
+    "params": {
+      "learning_rate": 0.1,
+      "max_depth": 6,
+      "n_estimators": 100,
+      "subsample": 0.8
+    },
+    "train_time": 11.784575939178467,
+    "precision": 1.0,
+    "recall": 0.9959514170040485,
+    "f1": 0.9979716024340771,
+    "roc_auc": 0.9999710815500289
+  },
+  "config": {
+    "random_seed": 42,
+    "test_size": 0.1,
+    "val_size": 0.1,
+    "max_duplicates": 3,
+    "tfidf": {
+      "max_features": 5000,
+      "analyzer": "char_wb",
+      "ngram_range": [
+        3,
+        6
+      ],
+      "min_df": 2,
+      "max_df": 0.95
+    },
+    "cv_folds": 5
+  },
+  "dataset_info": {
+    "total_samples": 12636,
+    "train_samples": 10108,
+    "val_samples": 1264,
+    "test_samples": 1264
+  }
+}

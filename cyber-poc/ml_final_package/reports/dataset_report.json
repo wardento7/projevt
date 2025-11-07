@@ -1,0 +1,99 @@
+{
+  "dataset_report": {
+    "date": "2025-11-03",
+    "total_samples": 12636,
+    "sources": [
+      "data/dataset.csv",
+      "FINAL_DATASET_FOR_AI_TEAM_v3.csv"
+    ],
+    "class_distribution": {
+      "benign": {
+        "count": 7700,
+        "percentage": 60.94
+      },
+      "malicious": {
+        "count": 4936,
+        "percentage": 39.06
+      }
+    },
+    "imbalance_ratio": 1.56,
+    "preprocessing": {
+      "initial_rows": 43555,
+      "after_empty_removal": 12636,
+      "after_deduplication": 12636,
+      "removed_total": 30919,
+      "removal_percentage": 71.0,
+      "max_duplicates_per_query": 3
+    },
+    "query_statistics": {
+      "min_length": 10,
+      "max_length": 500,
+      "mean_length": 85.3,
+      "median_length": 72
+    },
+    "attack_types": [
+      "UNION-based",
+      "Boolean-based blind",
+      "Time-based blind",
+      "Error-based",
+      "Stacked queries",
+      "Out-of-band",
+      "Inline queries"
+    ]
+  },
+  
+  "feature_engineering": {
+    "tfidf_features": {
+      "max_features": 5000,
+      "analyzer": "char_wb",
+      "ngram_range": [3, 6],
+      "min_df": 2,
+      "max_df": 0.95,
+      "vocabulary_size": 5000
+    },
+    "numeric_features": [
+      "len_raw",
+      "count_single_quote",
+      "count_double_quote",
+      "count_dashes",
+      "count_semicolon",
+      "count_comment",
+      "num_sql_keywords",
+      "has_union",
+      "has_or_equals",
+      "has_sleep",
+      "has_comments",
+      "url_encoded"
+    ],
+    "total_features": 5012
+  },
+  
+  "data_splits": {
+    "train": {
+      "samples": 10108,
+      "percentage": 80.0,
+      "benign": 6160,
+      "malicious": 3948
+    },
+    "validation": {
+      "samples": 1264,
+      "percentage": 10.0,
+      "benign": 770,
+      "malicious": 494
+    },
+    "test": {
+      "samples": 1264,
+      "percentage": 10.0,
+      "benign": 770,
+      "malicious": 494
+    }
+  },
+  
+  "data_quality": {
+    "missing_values": false,
+    "duplicate_handling": "max_3_per_query",
+    "ip_anonymization": true,
+    "empty_queries_removed": true,
+    "stratified_split": true
+  }
+}

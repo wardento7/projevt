@@ -1,0 +1,15 @@
+ML Model Inference Test
+============================================================
+Sample Query: SELECT * FROM users WHERE id=1 OR 1=1 --
+Prediction: MALICIOUS
+Malicious Score: 0.9965
+Benign Score: 0.0035
+Recommended Action: BLOCK
+
+Features Extracted:
+  - length: 40
+  - single_quotes: 0
+  - sql_keywords: 1
+  - has_or_equals: True
+
+Timestamp: 2025-11-07T22:39:46.795462Z

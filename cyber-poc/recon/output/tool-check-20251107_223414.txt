@@ -1,0 +1,7 @@
+Recon Tools Availability Check
+============================================================
+nmap: AVAILABLE
+  Path: /opt/homebrew/bin/nmap
+sqlmap: AVAILABLE
+  Path: /opt/homebrew/bin/sqlmap
+zap-cli: NOT FOUND
