@@ -1,0 +1,49 @@
+{
+  "description": "Column name mapping to canonical schema",
+  "canonical_schema": [
+    "id",
+    "timestamp",
+    "source_ip",
+    "method",
+    "url",
+    "params",
+    "body",
+    "raw_query",
+    "label",
+    "attack_type"
+  ],
+  "mappings": {
+    "merged.csv": {
+      "is_malicious": "label",
+      "notes": "Boolean field indicating whether request is malicious"
+    },
+    "dataset.csv": {
+      "is_malicious": "label",
+      "notes": "Boolean field indicating whether request is malicious"
+    }
+  },
+  "additional_columns": {
+    "merged.csv": [
+      "headers",
+      "insertion_point",
+      "mutation_type",
+      "orig_payload_id",
+      "difficulty_score",
+      "source_file",
+      "Query",
+      "Label",
+      "Attack_Type",
+      "query_hash"
+    ],
+    "dataset.csv": [
+      "headers",
+      "insertion_point",
+      "mutation_type",
+      "orig_payload_id",
+      "difficulty_score"
+    ]
+  },
+  "notes": "Additional columns beyond canonical schema are preserved but not required for model inference. Query, Label, Attack_Type appear to be duplicates with different casing.",
+  "version": "1.0",
+  "created": "2025-11-08T21:22:00Z"
+}
