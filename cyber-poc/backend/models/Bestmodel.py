@@ -16,6 +16,7 @@ import numpy as np
 import re
 from typing import Dict, Any, Tuple
 from pathlib import Path
+from xgboost import XGBClassifier
 
 
 class BestModel:
@@ -52,16 +53,23 @@ class BestModel:
     def _load_artifacts(self):
         """Load all required model artifacts."""
         try:
-            # Find the XGBoost model file
-            model_files = list(self.models_dir.glob("best_xgboost_*.joblib"))
-            if not model_files:
+            # Find the XGBoost model file (prefer .json format)
+            json_models = list(self.models_dir.glob("best_xgboost_*.json"))
+            joblib_models = list(self.models_dir.glob("best_xgboost_*.joblib"))
+            
+            if json_models:
+                # Use new JSON format (no pickle warnings)
+                model_path = sorted(json_models)[-1]  # Use most recent
+                print(f"Loading model from: {model_path}")
+                self.model = XGBClassifier()
+                self.model.load_model(str(model_path))
+            elif joblib_models:
+                # Fallback to old joblib format
+                model_path = joblib_models[0]
+                print(f"Loading model from: {model_path} (legacy format)")
+                self.model = joblib.load(model_path)
+            else:
                 raise FileNotFoundError(f"No XGBoost model found in {self.models_dir}")
-            
-            model_path = model_files[0]  # Use the first (should be only one)
-            print(f"Loading model from: {model_path}")
-            
-            # Load model
-            self.model = joblib.load(model_path)
             
             # Load TF-IDF vectorizer
             tfidf_path = self.models_dir / "tfidf_vectorizer.joblib"
@@ -109,85 +117,72 @@ class BestModel:
     def _extract_features(self, raw_query: str) -> Dict[str, Any]:
         """
         Extract numeric and text features from raw query.
+        MUST match the features used during training!
         
         Args:
             raw_query: Raw input query/request string
             
         Returns:
-            Dictionary containing extracted features
+            Dictionary containing extracted features (in exact training order)
         """
-        # Numeric features
-        len_raw = len(raw_query)
-        num_special_chars = len(re.findall(r'[^a-zA-Z0-9\s]', raw_query))
-        num_sql_keywords = len(re.findall(
-            r'\b(SELECT|UNION|INSERT|UPDATE|DELETE|DROP|CREATE|ALTER|EXEC|EXECUTE)\b',
-            raw_query,
-            re.IGNORECASE
-        ))
-        num_quotes = raw_query.count("'") + raw_query.count('"')
-        num_dashes = raw_query.count('-')
-        num_semicolons = raw_query.count(';')
-        num_equals = raw_query.count('=')
-        num_percent = raw_query.count('%')
+        query_lower = raw_query.lower()
         
-        # Suspicious patterns
-        has_union = int(bool(re.search(r'\bUNION\b', raw_query, re.IGNORECASE)))
-        has_or_1_1 = int(bool(re.search(r'(\bOR\b\s+\d+\s*=\s*\d+|\d+\s*=\s*\d+)', raw_query, re.IGNORECASE)))
-        has_comment = int(bool(re.search(r'(--|/\*|\*/|#)', raw_query)))
-        has_script_tag = int(bool(re.search(r'<script', raw_query, re.IGNORECASE)))
-        
+        # Extract features in EXACT same order as training
         features = {
-            'len_raw': len_raw,
-            'num_special_chars': num_special_chars,
-            'num_sql_keywords': num_sql_keywords,
-            'num_quotes': num_quotes,
-            'num_dashes': num_dashes,
-            'num_semicolons': num_semicolons,
-            'num_equals': num_equals,
-            'num_percent': num_percent,
-            'has_union': has_union,
-            'has_or_1_1': has_or_1_1,
-            'has_comment': has_comment,
-            'has_script_tag': has_script_tag,
-            'suspicious_chars': num_special_chars + num_quotes + num_dashes
+            'len_raw': len(raw_query),
+            'num_sql_keywords': sum(1 for kw in ['select', 'union', 'insert', 'update', 
+                                                   'delete', 'drop', 'create', 'alter', 
+                                                   'exec', 'script'] if kw in query_lower),
+            'has_union': int('union' in query_lower),
+            'has_select': int('select' in query_lower),
+            'has_or_1_1': int('or 1=1' in query_lower or 'or 1 = 1' in query_lower),
+            'has_comment': int('--' in raw_query or '/*' in raw_query or '#' in raw_query),
+            'has_quote': int("'" in raw_query or '"' in raw_query),
+            'num_special': sum(1 for c in raw_query if c in "';\"=<>()"),
+            'has_script': int('<script' in query_lower),
+            'has_encoded': int('%' in raw_query),
+            'num_equals': raw_query.count('='),
+            'num_parens': raw_query.count('(') + raw_query.count(')')
         }
         
         return features
     
-    def _prepare_input(self, raw_query: str) -> np.ndarray:
+    def _prepare_input(self, raw_query: str) -> Tuple[np.ndarray, Dict[str, Any]]:
         """
         Prepare input features for model prediction.
+        MUST match the feature order used during training!
         
         Args:
             raw_query: Raw input query string
             
         Returns:
-            Feature array ready for model input
+            Tuple of (feature_array, numeric_features_dict)
         """
+        from scipy.sparse import hstack, csr_matrix
+        import pandas as pd
+        
         # Extract numeric features
         numeric_features = self._extract_features(raw_query)
         
-        # Create numeric feature vector (in expected order)
-        numeric_vector = np.array([[
-            numeric_features['len_raw'],
-            numeric_features['num_special_chars'],
-            numeric_features['num_sql_keywords'],
-            numeric_features['num_quotes'],
-            numeric_features['num_dashes'],
-            numeric_features['num_semicolons'],
-            numeric_features['num_equals'],
-            numeric_features['num_percent'],
-            numeric_features['has_union'],
-            numeric_features['has_or_1_1'],
-            numeric_features['has_comment'],
-            numeric_features['has_script_tag']
-        ]])
+        # Feature names in EXACT training order
+        feature_names = ['len_raw', 'num_sql_keywords', 'has_union', 'has_select', 
+                        'has_or_1_1', 'has_comment', 'has_quote', 'num_special', 
+                        'has_script', 'has_encoded', 'num_equals', 'num_parens']
+        
+        # Create DataFrame with proper feature names (fixes sklearn warning)
+        numeric_df = pd.DataFrame([[numeric_features[k] for k in feature_names]], 
+                                  columns=feature_names)
         
         # Scale numeric features
-        numeric_scaled = self.numeric_scaler.transform(numeric_vector)
+        numeric_scaled = self.numeric_scaler.transform(numeric_df)
         
         # Transform text with TF-IDF
         tfidf_features = self.tfidf_vectorizer.transform([raw_query])
+        
+        # Concatenate features (numeric first, then TF-IDF)
+        features_combined = hstack([csr_matrix(numeric_scaled), tfidf_features])
+        
+        return features_combined, numeric_features
         
         # Concatenate features
         combined_features = np.hstack([numeric_scaled, tfidf_features.toarray()])
@@ -230,15 +225,15 @@ class BestModel:
             
             # Add specific threat indicators to reason
             threat_indicators = []
-            if numeric_features['num_sql_keywords'] > 2:
+            if numeric_features.get('num_sql_keywords', 0) > 2:
                 threat_indicators.append(f"{numeric_features['num_sql_keywords']} SQL keywords")
-            if numeric_features['has_union']:
+            if numeric_features.get('has_union', 0):
                 threat_indicators.append("UNION statement detected")
-            if numeric_features['has_or_1_1']:
+            if numeric_features.get('has_or_1_1', 0):
                 threat_indicators.append("OR 1=1 pattern detected")
-            if numeric_features['has_comment']:
+            if numeric_features.get('has_comment', 0):
                 threat_indicators.append("SQL comment markers")
-            if numeric_features['has_script_tag']:
+            if numeric_features.get('has_script', 0):
                 threat_indicators.append("Script tag detected (XSS)")
             
             if threat_indicators:
